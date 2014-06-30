@@ -1,0 +1,4 @@
+SecretaryProblemSimulator
+=========================
+
+MSc project stuff
