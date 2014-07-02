@@ -19,4 +19,9 @@ public interface Algorithm {
      * but that's low priority? I guess? and adding some sort of factory/builder later should be simple enough.
      */
     public boolean consider(int val, Set answerSet, Matroid opMatroid);
+
+    /*
+     * returns the string name for the type of matroid it needs to run.
+     */
+    public String matroidType();
 }

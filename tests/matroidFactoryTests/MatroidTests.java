@@ -8,10 +8,12 @@ import org.junit.Test;
  */
 public class MatroidTests {
     static Matroid testMat;
+    static int[] testMatVals;
 
     @Test
     public void permissableTest() {
-        testMat = new Matroid("", );
+
+        testMat = new Matroid();
 
     }
 
