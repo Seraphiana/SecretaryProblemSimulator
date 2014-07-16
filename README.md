@@ -28,6 +28,17 @@ some sort of random number generator object needs to be there somewhere. Need to
     mersenne twister? seems like it'll be much safer to use than a linear congruential generator
     not sure a LCG would be good enough, and I don't really have the time/resources to get into higher rng theory.
     or use a WELL? like, I really don't know what I'm looking at here nor how much it matters
+        
+        ok, with further thought I get to the issue of actually making the thing. 
+        I mean, making a matroid isn't just randomising numbers and throwing them in.
+        as I see it, the way to do it would be to specify a range of values, and for each flip a coin for if to include it
+        and then iterate over this set for each possible combination. But that would be hopelessly slow and inefficient
+            (I think it would be?)
+        and whats more, while a matroid doesn't include duplicates, the candidate list may well?
+            (is that true? I really don't know. I can hypothetically imagine it, but not for say, graphic matroids)
+        in which case I'd need to create the string of candidates, store them as a list, then create sets from them
+        but I'm stuck. I have no idea how to create a set from a set randomly.
+        
 
 the matroid class is going to specify a matroid.
     kind of need to make it myself, since I can't find something acceptable in the java API
@@ -41,3 +52,28 @@ then we can run some sort of loop over the list of elements, as provided by the 
 assemble a solution set item by item until we're done then return
 
 the view will need to provide some methods for the controller, insert this into the loop at the end, I guess.
+
+
+
+Bluh Bluh Bluh get rid of all of that. Start over (kind of)
+
+        GUI
+         |
+        Display
+         |
+        Controller - Algorithm
+         |        \    |?
+        Oracle    Randomiser
+        
+so, the Gui is a thing, using javafx. The Display sends it stuff to use and look pretty
+    I need to work out how this works.
+
+the controller is an actual controller (Woo!)
+
+the algorithm says what to do each time (like, the algorithm itself)
+
+the oracle tells you whether a given value is allowable.
+
+the randomiser gets told what size set you want to use, and randomises the order, gives all that list to the algorithm.
+
+now add a factory: will let me add different kinds of matroid (eg vectors)
