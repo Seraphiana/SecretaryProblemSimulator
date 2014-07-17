@@ -57,13 +57,13 @@ the view will need to provide some methods for the controller, insert this into 
 
 Bluh Bluh Bluh get rid of all of that. Start over (kind of)
 
-        GUI
+        main.GUI
          |
         Display
          |
-        Controller - Algorithm
+        main.Controller - main.Algorithm
          |        \    |?
-        Oracle    Randomiser
+        Oracle    main.Randomiser
         
 so, the Gui is a thing, using javafx. The Display sends it stuff to use and look pretty
     I need to work out how this works.
