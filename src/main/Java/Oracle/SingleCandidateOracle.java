@@ -8,29 +8,17 @@ import java.util.Set;
 /**
  * Created by Fliss on 04/07/14.
  */
-public class SingleCandidateOracle<T> implements Oracle<T> {
+public class SingleCandidateOracle<T> extends OracleAbs<T> implements Oracle<T> {
 
-    private ModuleController controller;
-    private Set<T> SolutionSet;
 
     public SingleCandidateOracle(ModuleController controller) {
-        this.controller = controller;
-        SolutionSet = new HashSet<T>();
+        super(controller);
     }
 
     @Override
     public boolean consider(T value) {
-        return SolutionSet.isEmpty();
+        return getSolution().isEmpty();
     }
 
-    @Override
-    public void addValue(T candidate) {
-        SolutionSet.add(candidate);
-    }
-
-    @Override
-    public Set<T> getSolution() {
-        return SolutionSet;
-    }
 
 }

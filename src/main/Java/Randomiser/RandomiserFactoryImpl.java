@@ -6,12 +6,19 @@ import Java.Controller.ModuleController;
  * Created by Fliss on 14/07/14.
  */
 public class RandomiserFactoryImpl implements RandomiserFactory {
-    public RandomiserFactoryImpl(ModuleController controller) {
+    private final ModuleController controller;
 
+    public RandomiserFactoryImpl(ModuleController controller) {
+        this.controller = controller;
     }
 
     @Override
     public Randomiser createRandomiser() {
-        return null;
+        if (controller.getRandomiserType().equals("Integer")) {
+            Randomiser<Integer> randomiser = new IntRandomiser(controller.getRandomiserSize(), controller.getRandElementFrequency());
+        return randomiser;
+        }
+
+        else return null;
     }
 }
