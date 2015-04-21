@@ -11,10 +11,8 @@ import java.util.Set;
 public abstract class OracleAbs<T> implements Oracle<T> {
 
     private final ModuleController controller;
-    private Set<T> solutionSet;
 
     public OracleAbs(ModuleController controller) {
-        this.solutionSet = new HashSet<T>();;
         this.controller = controller;
     }
 
@@ -22,13 +20,4 @@ public abstract class OracleAbs<T> implements Oracle<T> {
         return controller;
     }
 
-    @Override
-    public void addValue(T candidate) {
-        solutionSet.add(candidate);
-    }
-
-    @Override
-    public Set<T> getSolution() {
-        return solutionSet;
-    }
 }

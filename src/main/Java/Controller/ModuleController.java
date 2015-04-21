@@ -5,7 +5,7 @@ import java.util.Set;
 /**
  * Created by Fliss on 14/07/14.
  */
-public interface ModuleController<T extends Comparable<T>> {
+public interface ModuleController {
 
     /*
      * returns the string for the type of value to popul8 the matroid
@@ -35,12 +35,12 @@ public interface ModuleController<T extends Comparable<T>> {
     /*
      * returns the current element corresponding to the current index number
      */
-    T getNext();
+    Comparable getNext();
 
     /*
      * returns a set of all elements already seen (less than the current index)
      */
-    Set<T> getAlreadySeen();
+    Set<Comparable> getAlreadySeen();
 
     /*
      * returns the response from the oracle regarding if a given candid8 is accepta8le or not
@@ -48,12 +48,23 @@ public interface ModuleController<T extends Comparable<T>> {
     boolean checkCandidate();
 
     /*
+     * returns the solution currently stored in the randomiser.
+     * may be used part way through runtime
+     */
+    Set<Comparable> getSolution();
+
+    /*
      * returns all the values in the matroid. Added for future use
      */
-    Set<T> getMatroidContents();
+    Set<Comparable> getMatroidContents();
 
     /*
      * returns the maximum value seen so far
      */
-    T getMaximum();
+    Comparable getMaximum();
+
+    /*
+     * takes in details for starting a new algorithm and sets up a new session.
+     */
+    Set<Comparable> newSession(String algorithm, String oracle, String objectType, int matroidSize, int matroidElementFrequency);
 }

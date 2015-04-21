@@ -17,7 +17,7 @@ public class SingleCandidateOracle<T> extends OracleAbs<T> implements Oracle<T> 
 
     @Override
     public boolean consider(T value) {
-        return getSolution().isEmpty();
+        return getController().getSolution().isEmpty();
     }
 
 

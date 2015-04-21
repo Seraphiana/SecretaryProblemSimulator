@@ -9,7 +9,4 @@ public interface Oracle<T> {
 
     boolean consider(T value);
 
-    void addValue(T candidate);
-
-    Set<T> getSolution();
 }

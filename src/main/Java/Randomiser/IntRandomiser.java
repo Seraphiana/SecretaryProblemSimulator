@@ -1,7 +1,10 @@
 package Java.Randomiser;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+
 import org.apache.commons.math3.random.MersenneTwister;
 
 /**
@@ -11,6 +14,7 @@ public class IntRandomiser implements Randomiser<Integer> {
     private List<Integer> matroid;
     private int number;
     private MersenneTwister randomGen;
+    private Set<Integer> solution;
 
 
     public IntRandomiser(int max) {
@@ -27,6 +31,7 @@ public class IntRandomiser implements Randomiser<Integer> {
         for (SortingElement<Integer> aMat : mat) {
             matroid.add(aMat.getValue());
         }
+        solution = new HashSet<Integer>();
     }
 
     public IntRandomiser(int max, int frequency) {
@@ -46,7 +51,9 @@ public class IntRandomiser implements Randomiser<Integer> {
         for (SortingElement<Integer> aMat : mat) {
             matroid.add(aMat.getValue());
         }
+        solution = new HashSet<Integer>();
     }
+
 
     @Override
     public Integer getItem() {
@@ -54,12 +61,36 @@ public class IntRandomiser implements Randomiser<Integer> {
     }
 
     @Override
-    public List<Integer> getMatroid() {
-        return matroid;
+    public Set<Integer> getMatroid() {
+        return new HashSet<Integer>(matroid);
     }
 
     @Override
-    public void alert() {
+    public void itemDecision(boolean answer) {
+        if(answer) {
+            solution.add(getItem());
+        }
+        alert();
+    }
+
+    @Override
+    public Set<Integer> getSolution() {
+        return solution;
+    }
+
+    private void alert() {
         number++;
     }
+
+    @Override
+    public int getIndex() {
+        return number;
+    }
+
+    @Override
+    public Set<Integer> getAlreadySeen() {
+        List<Integer> alreadySeen = matroid.subList(0, number);
+        return new HashSet<Integer>(alreadySeen);
+    }
+
 }

@@ -19,14 +19,15 @@ public class ConventionalAlgorithmTests {
 
     @Test
     public void shouldAnswerYesTest() {
+        Set alreadySeen = new HashSet<Object>();
         ModuleController controller = mock(ModuleController.class);
         SecretaryAlgorithm algorithm = new ConventionalAlgorithm(controller);
         when(controller.getMatroidSize()).thenReturn(1);
         when(controller.getIndexNumber()).thenReturn(0);
         when(controller.getNext()).thenReturn(1);
-        when(controller.getAlreadySeen()).thenReturn(new HashSet<Object>());
+        when(controller.getAlreadySeen()).thenReturn(alreadySeen);
         when(controller.checkCandidate()).thenReturn(true);
-        boolean answer = algorithm.EvaluateNext();
+        boolean answer = algorithm.evaluateNext();
         assertTrue(answer);
     }
 
@@ -39,7 +40,7 @@ public class ConventionalAlgorithmTests {
         when(controller.getMaximum()).thenReturn(5);
         when(controller.getNext()).thenReturn(6);
         when(controller.checkCandidate()).thenReturn(true);
-        boolean answer = algorithm.EvaluateNext();
+        boolean answer = algorithm.evaluateNext();
         assertTrue(answer);
     }
 
@@ -52,7 +53,7 @@ public class ConventionalAlgorithmTests {
         when(controller.getNext()).thenReturn(1);
         when(controller.checkCandidate()).thenReturn(true);
         when(controller.getMaximum()).thenReturn(5);
-        boolean answer = algorithm.EvaluateNext();
+        boolean answer = algorithm.evaluateNext();
         assertFalse(answer);
     }
 }

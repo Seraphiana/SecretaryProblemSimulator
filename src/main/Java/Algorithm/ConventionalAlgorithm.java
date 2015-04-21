@@ -9,7 +9,7 @@ import static java.lang.Math.*;
 /**
  * Created by Fliss on 04/07/14.
  */
-public class ConventionalAlgorithm implements SecretaryAlgorithm {
+public class ConventionalAlgorithm extends IntSecretaryAlgorithm {
     private final ModuleController controller;
     private int cutOff;
 
@@ -19,7 +19,7 @@ public class ConventionalAlgorithm implements SecretaryAlgorithm {
     }
 
     @Override
-    public boolean EvaluateNext() {
+    public boolean evaluateNext() {
         if (cutOff == -1) {
             cutOff = (int) floor(controller.getMatroidSize()/E);
         }

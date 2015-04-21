@@ -9,6 +9,7 @@ import java.util.Set;
 
 import static junit.framework.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 /**
  * Created by Fliss on 16/07/14.
@@ -20,6 +21,7 @@ public class SCOracleTests {
         Integer x = 5;
         ModuleController controller = mock(ModuleController.class);
         Oracle<Integer> oracle = new SingleCandidateOracle(controller);
+        when(controller.getSolution()).thenReturn(new HashSet<Comparable>());
         assertEquals(true, oracle.consider(x));
     }
 
@@ -28,18 +30,10 @@ public class SCOracleTests {
         Integer x = 3;
         ModuleController controller = mock(ModuleController.class);
         Oracle<Integer> oracle = new SingleCandidateOracle(controller);
-        oracle.addValue(x);
+        Set<Comparable> set = new HashSet<Comparable>();
+        set.add(9);
+        when(controller.getSolution()).thenReturn(set);
         assertEquals(false, oracle.consider(x));
     }
 
-    @Test
-    public void shouldGiveASolutionSet() {
-        Integer x = 8;
-        ModuleController controller = mock(ModuleController.class);
-        Oracle<Integer> oracle = new SingleCandidateOracle(controller);
-        oracle.addValue(x);
-        Set<Integer> testAns = new HashSet<Integer>();
-        testAns.add(x);
-        assertEquals(testAns, oracle.getSolution());
-    }
 }
