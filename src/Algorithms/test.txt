@@ -1,0 +1,4 @@
+c = x/n+max
+Step{
+    if(x>m*0.8) add
+}

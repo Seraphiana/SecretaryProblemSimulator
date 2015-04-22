@@ -21,13 +21,13 @@ public class AlgorithmBuilderTest {
 
     }
 
-    @Test
-    public void shouldMakeAnAlgorithmTest() {
-        String fileLocation = algorithmBuilder.findFile();
-        interpreter = new Interpreter(fileLocation);
-        interpreter.buildAlgorithm();
-
-        assertTrue(true);   //How to do this?
-    }
+//    @Test
+//    public void shouldMakeAnAlgorithmTest() {
+//        String fileLocation =
+//        interpreter = new Interpreter(fileLocation);
+//        interpreter.buildAlgorithm();
+//
+//        assertTrue(true);   //How to do this?
+//    }
 
 }

@@ -5,8 +5,13 @@ package Java.Algorithm.AlgorithmBuilder;
  */
 public class AlgorithmBuilder {
 
-
-    public String findFile() {
-        return null;
+    public Algorithm buildAlgorithm(String fileLocation) {
+        Tokeniser tokeniser = new Tokeniser(fileLocation);
+        tokeniser.tokenise();
+        Parser parser = new Parser();
+        parser.parse(tokeniser.getTokens());
+        Algorithm algorithm = new Algorithm(parser.getIfClauses(), parser.getCutoff());
+        return algorithm;
     }
+
 }

@@ -19,41 +19,32 @@ public class Tokeniser {
         tokenInfos = new LinkedList<TokenInfo>();
         tokens = new LinkedList<Token>();
         fileLocation = filelocation;
+        add("x", 1); // current variable
+        add("n", 2); // item number
+        add("c", 3); // cutoff
+        add("if", 4); // if function
+        add("store", 5); // store value
+        add(">", 6); // greater than
+        add("<", 7); // less than
+        add("max", 8); // maximum seen element
+        add("size", 9); // matroid size
+        add("=", 10); // equals
+        add("[0-9]+.[0-9]+", 11); // number
+        add("Step\\{", 12); // begin step
+        add("\\}", 13); // end step
+        add("add", 14); // add, if oracle says yes
+        add("[*/]", 15); // mult or divide
+        add("\\(", 17); // open bracket
+        add("\\)", 16); // close bracket
+
     }
 
-    public void add(String regex, int token) {
+    private void add(String regex, int token) {
         tokenInfos.add(
                 new TokenInfo(
                   Pattern.compile("^("+regex+")"), token));
     }
 
-    public static void main(String[] args) {
-        Tokeniser tokeniser = new Tokeniser(args[0]);
-        tokeniser.add("x", 1); // current variable
-        tokeniser.add("n", 2); // item number
-        tokeniser.add("c", 3); // cutoff
-        tokeniser.add("if", 4); // if function
-        tokeniser.add("store", 5); // store value
-        tokeniser.add(">", 6); // greater than
-        tokeniser.add("<", 7); // less than
-        tokeniser.add("max", 8); // maximum seen element
-        tokeniser.add("size", 9); // matroid size
-        tokeniser.add("=", 10); // equals
-        tokeniser.add("[0-9]+", 11); // integer number
-        tokeniser.add("Step\\{", 12); // begin step
-        tokeniser.add("\\}", 13); // end step
-        tokeniser.add("add", 14); // add, if oracle says yes
-        tokeniser.add("[*/]", 15); // mult or divide
-        tokeniser.add("\\(", 17); // open bracket
-        tokeniser.add("\\)", 16); // close bracket
-
-        try {
-            tokeniser.file = tokeniser.readFile(tokeniser.fileLocation);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        tokeniser.tokenise();
-    }
 
     private String readFile(String fileLocation) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new FileReader(fileLocation));
@@ -72,6 +63,12 @@ public class Tokeniser {
     }
 
     public void tokenise() {
+
+        try {
+            file = readFile(fileLocation);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         tokens.clear();
         while (!file.equals("")) {
             boolean match = false;

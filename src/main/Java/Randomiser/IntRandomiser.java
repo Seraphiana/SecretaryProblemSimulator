@@ -54,6 +54,27 @@ public class IntRandomiser implements Randomiser<Integer> {
         solution = new HashSet<Integer>();
     }
 
+    public IntRandomiser(int max, int a, int b, int c, int d, int freq) {
+        number = 0;
+        randomGen = new MersenneTwister();
+        int size = (max+1) * freq;
+        List<SortingElement<Integer>> mat = new ArrayList<SortingElement<Integer>>();
+        int k;
+        int val;
+        for (int x = 0; x<=max; x++) {
+            val = a*x^(3) + b*x^2 + c*x + d;
+            for (int n = 1; n<=freq; n++) {
+                k = randomGen.nextInt(size);
+                mat.add(new SortingElement<Integer>(val, k));
+            }
+        }
+        mat.sort(new Comparer());
+        matroid = new ArrayList<Integer>();
+        for (SortingElement<Integer> aMat : mat) {
+            matroid.add(aMat.getValue());
+        }
+        solution = new HashSet<Integer>();
+    }
 
     @Override
     public Integer getItem() {

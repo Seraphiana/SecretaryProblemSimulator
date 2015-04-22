@@ -23,6 +23,12 @@ public interface ModuleController {
     int getRandomiserSize();
 
     /*
+     * returns a string representing the rate of increase of elements
+     * eg cubic, linear, quadratic, exponential
+     */
+    String getRandomiserScale();
+
+    /*
      * returns the total number of elements in the matroid 8eing used for the algorithm
      */
     int getMatroidSize();

@@ -25,6 +25,7 @@ public class ModuleControllerImpl implements ModuleController {
     private OracleFactory oracleFactory;
     private AlgorithmFactory algorithmFactory;
     private int matroidElementFrequency;
+    private String randomiserScale;
 
 
     public ModuleControllerImpl() {
@@ -50,6 +51,11 @@ public class ModuleControllerImpl implements ModuleController {
     public int getRandomiserSize() {
         //also comes from user input, also leave for a 8it
         return randomiserSize;
+    }
+
+    @Override
+    public String getRandomiserScale() {
+        return randomiserScale;
     }
 
     @Override

@@ -2,15 +2,22 @@ package Java.Algorithm.AlgorithmBuilder;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Stack;
+import java.util.Queue;
 
 /**
  * Created by seraphiana on 15/04/15.
  */
 public class Parser {
-    LinkedList<Token> tokens;
-    Token lookahead;
-    Stack<Token> stack;
+    private LinkedList<Token> tokens;
+    private Token lookahead;
+    private Queue<Token> queue;
+    private CutoffClause cutoff;
+    private LinkedList<IfClause> ifClauses;
+
+    public Parser() {
+        tokens = new LinkedList<Token>();
+        queue = new LinkedList<Token>();
+    }
 
 
     public void parse(List<Token> tokens1) throws ParserException{
@@ -28,26 +35,30 @@ public class Parser {
 
     private void algorithm() {
         while (lookahead.token != Token.STEP) {
-            stack.push(tokens.pop());
+            queue.add(tokens.pop());
         }
         evaluateCutoff();
-        stack.pop();
+        tokens.pop();
         while (lookahead.token != Token.ENDSTEP) {
             while (lookahead.token != Token.ADD) {
-                stack.push(tokens.pop());
+                queue.add(tokens.pop());
             }
-            stack.pop();
+            tokens.pop();
             evaluateIfClause();
         }
-        stack.pop();
+        tokens.pop();
     }
 
     private void evaluateIfClause() {
+        ifClauses.add(new IfClause(queue));
+        queue = new LinkedList<Token>();
 
     }
 
     private void evaluateCutoff() {
 
+        cutoff = new CutoffClause(queue);
+        queue = new LinkedList<Token>();
     }
 
     private void nextToken() {
@@ -57,6 +68,14 @@ public class Parser {
         } else {
             lookahead = tokens.getFirst();
         }
+    }
+
+    public LinkedList<IfClause> getIfClauses() {
+        return ifClauses;
+    }
+
+    public CutoffClause getCutoff() {
+        return cutoff;
     }
 
     private class ParserException extends RuntimeException {
