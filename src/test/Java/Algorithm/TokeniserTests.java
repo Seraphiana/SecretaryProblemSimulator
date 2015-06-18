@@ -18,16 +18,15 @@ public class TokeniserTests {
 
     @BeforeClass
     public static void buildUp() {
-        File file = new File("t.txt");
-        tokeniser = new Tokeniser("t.txt");
-        t = tokeniser.getClass();
-        URL url = t.getResource("t.txt");
-        System.out.println(url.getPath());
-        tokeniser = new Tokeniser(url.getPath());
+
     }
 
     @Test
     public void shouldPrintSomeStuffTest() {
+        File file = new File("/Algorithms/test.txt");
+        URL url = this.getClass().getResource("/Algorithms/test.txt");
+        System.out.println(url.getPath());
+        tokeniser = new Tokeniser(url.getPath());
         try {
             tokeniser.tokenise();
             for (Token tok : tokeniser.getTokens()) {

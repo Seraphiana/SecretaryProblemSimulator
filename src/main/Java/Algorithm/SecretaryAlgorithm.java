@@ -8,4 +8,7 @@ public interface SecretaryAlgorithm {
 
     String getMatroidType();
 
+    @Override
+    String toString();
+
 }

@@ -1,11 +1,15 @@
 package Java.Controller;
 
 import Java.Algorithm.*;
-import Java.GUI.GUI;
+import Java.GUI.GUIController;
 import Java.Oracle.*;
 import Java.Randomiser.*;
+import javafx.collections.ObservableList;
+import javafx.collections.ObservableListBase;
+import javafx.collections.transformation.SortedList;
 
-import java.util.HashSet;
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Set;
 
 /**
@@ -13,7 +17,7 @@ import java.util.Set;
  */
 public class ModuleControllerImpl implements ModuleController {
     private SecretaryAlgorithm algorithm;
-    private GUI gui;
+    private GUIController gui;
     private Randomiser randomiser;
     private Oracle crystalBall;
     private int randElementFreq;
@@ -26,7 +30,7 @@ public class ModuleControllerImpl implements ModuleController {
     private AlgorithmFactory algorithmFactory;
     private int matroidElementFrequency;
     private String randomiserScale;
-
+    private HashMap<String, SecretaryAlgorithm> algorithmHashMap;
 
     public ModuleControllerImpl() {
         randomiserFactory = new RandomiserFactoryImpl(this);
@@ -105,12 +109,34 @@ public class ModuleControllerImpl implements ModuleController {
 
         for (int i = 0; i<(matroidSize*matroidElementFrequency); i++) {
 
-            // Add the display elements for the GUI here
+            // Add the display elements for the GUIController here
 
             randomiser.itemDecision(algorithm.evaluateNext());
 
         }
         return getSolution();
+    }
+
+    @Override
+    public ObservableList<SecretaryAlgorithm> getAlgChoice() {
+
+        return new SortedList<SecretaryAlgorithm>(new ObservableListBase<SecretaryAlgorithm>() {
+            private LinkedList<SecretaryAlgorithm> algorithmList = new LinkedList<SecretaryAlgorithm>(algorithmHashMap.values());
+            @Override
+            public SecretaryAlgorithm get(int index) {
+                return algorithmList.get(index);
+            }
+
+            @Override
+            public int size() {
+                return algorithmList.size();
+            }
+        });
+    }
+
+    @Override
+    public SecretaryAlgorithm getAlgorithmName(String s) {
+        return algorithmHashMap.get(s);
     }
 
     private void initialise(String algorithm, String oracle, String objectType, int matroidSize, int matroidElementFrequency) {

@@ -1,5 +1,9 @@
 package Java.Controller;
 
+import Java.Algorithm.AlgorithmBuilder.Algorithm;
+import Java.Algorithm.SecretaryAlgorithm;
+import javafx.collections.ObservableList;
+
 import java.util.Set;
 
 /**
@@ -73,4 +77,8 @@ public interface ModuleController {
      * takes in details for starting a new algorithm and sets up a new session.
      */
     Set<Comparable> newSession(String algorithm, String oracle, String objectType, int matroidSize, int matroidElementFrequency);
+
+    ObservableList<SecretaryAlgorithm> getAlgChoice();
+
+    SecretaryAlgorithm getAlgorithmName(String s);
 }
