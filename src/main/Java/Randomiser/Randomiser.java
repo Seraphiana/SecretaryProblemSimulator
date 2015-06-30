@@ -10,7 +10,7 @@ public interface Randomiser<T extends Comparable<T>> {
 
     T getItem();
 
-    Set<T> getMatroid();
+    List<T> getMatroid();
 
     void itemDecision(boolean answer);
 

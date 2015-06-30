@@ -10,6 +10,7 @@ import javafx.collections.transformation.SortedList;
 
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -20,20 +21,18 @@ public class ModuleControllerImpl implements ModuleController {
     private GUIController gui;
     private Randomiser randomiser;
     private Oracle crystalBall;
-    private int randElementFreq;
-    private int randomiserSize;
-    private int matroidSize;
     private Comparable max;
     private String randomiserType;
     private RandomiserFactory randomiserFactory;
     private OracleFactory oracleFactory;
     private AlgorithmFactory algorithmFactory;
-    private int matroidElementFrequency;
-    private String randomiserScale;
     private HashMap<String, SecretaryAlgorithm> algorithmHashMap;
+    private String oracleType;
+    private String algorithmName;
+    private int[] buildData;
 
     public ModuleControllerImpl() {
-        randomiserFactory = new RandomiserFactoryImpl(this);
+        randomiserFactory = new RandomiserFactoryImpl();
         oracleFactory = new OracleFactoryImpl(this);
         algorithmFactory = new AlgorithmFactoryImpl(this);
     }
@@ -45,28 +44,6 @@ public class ModuleControllerImpl implements ModuleController {
         return algorithm.getMatroidType();
     }
 
-    @Override
-    public int getRandElementFrequency() {
-
-        return randElementFreq;
-    }
-
-    @Override
-    public int getRandomiserSize() {
-        //also comes from user input, also leave for a 8it
-        return randomiserSize;
-    }
-
-    @Override
-    public String getRandomiserScale() {
-        return randomiserScale;
-    }
-
-    @Override
-    public int getMatroidSize() {
-        //see a8ove
-        return matroidSize;
-    }
 
     @Override
     public int getIndexNumber() {
@@ -94,7 +71,7 @@ public class ModuleControllerImpl implements ModuleController {
     }
 
     @Override
-    public Set<Comparable> getMatroidContents() {
+    public List<Comparable> getMatroidContents() {
         return randomiser.getMatroid();
     }
 
@@ -104,24 +81,11 @@ public class ModuleControllerImpl implements ModuleController {
     }
 
     @Override
-    public Set<Comparable> newSession(String algorithmType, String oracle, String objectType, int matroidSize, int matroidElementFrequency) {
-        initialise(algorithmType, oracle, objectType, matroidSize, matroidElementFrequency);
-
-        for (int i = 0; i<(matroidSize*matroidElementFrequency); i++) {
-
-            // Add the display elements for the GUIController here
-
-            randomiser.itemDecision(algorithm.evaluateNext());
-
-        }
-        return getSolution();
-    }
-
-    @Override
     public ObservableList<SecretaryAlgorithm> getAlgChoice() {
 
-        return new SortedList<SecretaryAlgorithm>(new ObservableListBase<SecretaryAlgorithm>() {
-            private LinkedList<SecretaryAlgorithm> algorithmList = new LinkedList<SecretaryAlgorithm>(algorithmHashMap.values());
+        return new SortedList<>(new ObservableListBase<SecretaryAlgorithm>() {
+            private LinkedList<SecretaryAlgorithm> algorithmList = new LinkedList<>(algorithmHashMap.values());
+
             @Override
             public SecretaryAlgorithm get(int index) {
                 return algorithmList.get(index);
@@ -139,10 +103,17 @@ public class ModuleControllerImpl implements ModuleController {
         return algorithmHashMap.get(s);
     }
 
-    private void initialise(String algorithm, String oracle, String objectType, int matroidSize, int matroidElementFrequency) {
+    @Override
+    public boolean update() {
+        randomiserFactory.update(randomiserType, buildData);
+        crystalBall = oracleFactory.makeOracle(oracleType);
+        algorithm = algorithmFactory.createAlgorithm(algorithmName);
+        return true;
+    }
+
+    private void initialise(String algorithm, String oracle, String objectType, int[] buildData) {
         randomiserType = objectType;
-        this.matroidSize = matroidSize;
-        this.matroidElementFrequency = matroidElementFrequency;
+        this.buildData = buildData;
         this.algorithm = algorithmFactory.createAlgorithm(algorithm);
         this.crystalBall = oracleFactory.makeOracle(oracle);
         this.randomiser = randomiserFactory.createRandomiser();

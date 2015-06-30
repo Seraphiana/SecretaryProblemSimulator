@@ -11,8 +11,12 @@ import java.util.Set;
 public class SingleCandidateOracle<T> extends OracleAbs<T> implements Oracle<T> {
 
 
-    public SingleCandidateOracle(ModuleController controller) {
+    private SingleCandidateOracle(ModuleController controller) {
         super(controller);
+    }
+
+    public static SingleCandidateOracle createSingleCandidateOracle(ModuleController controller) {
+        return new SingleCandidateOracle(controller);
     }
 
     @Override

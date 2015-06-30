@@ -4,6 +4,7 @@ import Java.Algorithm.AlgorithmBuilder.Algorithm;
 import Java.Algorithm.SecretaryAlgorithm;
 import javafx.collections.ObservableList;
 
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -15,27 +16,6 @@ public interface ModuleController {
      * returns the string for the type of value to popul8 the matroid
      */
     String getRandomiserType();
-
-    /*
-     * returns the num8er of times each value should appear in the matroid
-     */
-    int getRandElementFrequency();
-
-    /*
-     * returns the largest value in the matroid
-     */
-    int getRandomiserSize();
-
-    /*
-     * returns a string representing the rate of increase of elements
-     * eg cubic, linear, quadratic, exponential
-     */
-    String getRandomiserScale();
-
-    /*
-     * returns the total number of elements in the matroid 8eing used for the algorithm
-     */
-    int getMatroidSize();
 
     /*
      * returns the current position in the matroid that the algorithm is working through
@@ -66,19 +46,16 @@ public interface ModuleController {
     /*
      * returns all the values in the matroid. Added for future use
      */
-    Set<Comparable> getMatroidContents();
+    List<Comparable> getMatroidContents();
 
     /*
      * returns the maximum value seen so far
      */
     Comparable getMaximum();
 
-    /*
-     * takes in details for starting a new algorithm and sets up a new session.
-     */
-    Set<Comparable> newSession(String algorithm, String oracle, String objectType, int matroidSize, int matroidElementFrequency);
-
     ObservableList<SecretaryAlgorithm> getAlgChoice();
 
     SecretaryAlgorithm getAlgorithmName(String s);
+
+    boolean update();
 }

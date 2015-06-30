@@ -20,7 +20,7 @@ public class SCOracleTests {
     public void ShouldAnswerYesTest() {
         Integer x = 5;
         ModuleController controller = mock(ModuleController.class);
-        Oracle<Integer> oracle = new SingleCandidateOracle(controller);
+        SingleCandidateOracle oracle =  SingleCandidateOracle.createSingleCandidateOracle(controller);
         when(controller.getSolution()).thenReturn(new HashSet<Comparable>());
         assertEquals(true, oracle.consider(x));
     }
@@ -29,8 +29,8 @@ public class SCOracleTests {
     public void shouldAnswerNoTest() {
         Integer x = 3;
         ModuleController controller = mock(ModuleController.class);
-        Oracle<Integer> oracle = new SingleCandidateOracle(controller);
-        Set<Comparable> set = new HashSet<Comparable>();
+        Oracle<Integer> oracle = SingleCandidateOracle.createSingleCandidateOracle(controller);
+        Set<Comparable> set = new HashSet<>();
         set.add(9);
         when(controller.getSolution()).thenReturn(set);
         assertEquals(false, oracle.consider(x));

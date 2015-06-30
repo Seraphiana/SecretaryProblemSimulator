@@ -9,6 +9,14 @@ public class CutoffClause {
     private Queue<Token> expression;
 
     public CutoffClause(Queue<Token> expression) {
+        boolean t = true;
+        while (t) {
+            t = false;
+            if (expression.peek().token==3 || expression.peek().token==10) {
+                expression.remove();
+                t = true;
+            }
+        }
         this.expression = expression;
     }
 

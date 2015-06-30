@@ -1,4 +1,5 @@
-c = x/n+max
+c=x/2
 Step{
-    if(x>m*0.8) add
+if(x>max*0.8)add
 }
+Z

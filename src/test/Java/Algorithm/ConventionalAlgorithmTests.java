@@ -19,7 +19,7 @@ public class ConventionalAlgorithmTests {
 
     @Test
     public void shouldAnswerYesTest() {
-        Set alreadySeen = new HashSet<Object>();
+        Set alreadySeen = new HashSet<>();
         ModuleController controller = mock(ModuleController.class);
         SecretaryAlgorithm algorithm = new ConventionalAlgorithm(controller);
         when(controller.getMatroidSize()).thenReturn(1);

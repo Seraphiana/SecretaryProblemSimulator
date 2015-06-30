@@ -17,9 +17,12 @@ public class OracleFactoryImpl implements Java.Oracle.OracleFactory {
 
     @Override
     public Oracle makeOracle(String oracleType) {
-        if (oracleType.equals(Constants.SINGLECANDIDATE)) {
-            return new SingleCandidateOracle(controller);
+        switch (oracleType) {
+            case Constants.SINGLECANDIDATE:
+                return SingleCandidateOracle.createSingleCandidateOracle(controller);
+
+            default:
+                return null;
         }
-        return null;
     }
 }

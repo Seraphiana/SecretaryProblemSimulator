@@ -1,5 +1,6 @@
 package Java.RandomiserFactory;
 
+import Java.Constants.Constants;
 import org.junit.Test;
 
 import Java.Controller.ModuleController;
@@ -19,10 +20,11 @@ public class FactoryTests {
 
     @Test
     public void shouldGiveAnIntRandomiser() {
-        ModuleController controller = mock(ModuleController.class);
-        when(controller.getRandomiserType()).thenReturn("Integer");
-        RandomiserFactory randomiserFactory = new RandomiserFactoryImpl(controller);
+        RandomiserFactory randomiserFactory = new RandomiserFactoryImpl();
+        int[] buildData = {1,1,1,1,1};
+        randomiserFactory.update(Constants.INTEGER, buildData);
         Randomiser randomiser = randomiserFactory.createRandomiser();
-        assertTrue(randomiser instanceof IntRandomiser);
+
+        assertTrue(randomiser.getClass() == IntRandomiser.class);
     }
 }

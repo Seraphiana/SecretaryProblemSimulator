@@ -48,14 +48,14 @@ public class GUIController implements Initializable {
     private ModuleController moduleController;
 
 
-    public GUIController(ModuleController moduleController, HashMap<String) {
+    public GUIController(ModuleController moduleController) {
         moduleController = this.moduleController;
 
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        algorithmChoice = new ChoiceBox<SecretaryAlgorithm>(moduleController.getAlgChoice());
+        algorithmChoice = new ChoiceBox<>(moduleController.getAlgChoice());
         basePane = new AnchorPane();
         choiceGrid = new GridPane();
         topGrid = new GridPane();
@@ -63,20 +63,14 @@ public class GUIController implements Initializable {
         runButton = new Button();
         solutionPane = new Pane();
         inPane = new Pane();
-        matroidChoice = new ChoiceBox<Object>();
+        matroidChoice = new ChoiceBox<>();
 
-        stopButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
+        stopButton.setOnAction(actionEvent -> {
 
-            }
         });
 
-        runButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                moduleController.setDeets();
-            }
+        runButton.setOnAction(actionEvent -> {
+
         });
 
         algorithmChoice.setConverter(new StringConverter<SecretaryAlgorithm>() {

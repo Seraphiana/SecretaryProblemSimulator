@@ -12,78 +12,66 @@ import org.apache.commons.math3.random.MersenneTwister;
  */
 public class IntRandomiser implements Randomiser<Integer> {
     private List<Integer> matroid;
-    private int number;
+    private int index;
     private MersenneTwister randomGen;
     private Set<Integer> solution;
 
 
     public IntRandomiser(int max) {
-        number = 0;
-        randomGen = new MersenneTwister();
-        List<SortingElement<Integer>> mat = new ArrayList<SortingElement<Integer>>();
-        int j;
-        for (int i = 1; i<=max; i++) {
-            j = randomGen.nextInt(max);
-            mat.add(new SortingElement<Integer>(i, j));
-        }
-        mat.sort(new Comparer());
-        matroid = new ArrayList<Integer>();
-        for (SortingElement<Integer> aMat : mat) {
-            matroid.add(aMat.getValue());
-        }
-        solution = new HashSet<Integer>();
+        this(max, 0, 0, 1, 1, 1);
     }
 
+    // constructor that creates ints as a linear function, with duplicates
     public IntRandomiser(int max, int frequency) {
-        number = 0;
-        randomGen = new MersenneTwister();
-        int size = max*frequency;
-        List<SortingElement<Integer>> mat = new ArrayList<SortingElement<Integer>>();
-        int k;
-        for (int i = 1; i<=max; i++) {
-            for (int j = 1; j<=frequency; j++) {
-                k = randomGen.nextInt(size);
-                mat.add(new SortingElement<Integer>(i, k));
-            }
-        }
-        mat.sort(new Comparer());
-        matroid = new ArrayList<Integer>();
-        for (SortingElement<Integer> aMat : mat) {
-            matroid.add(aMat.getValue());
-        }
-        solution = new HashSet<Integer>();
+        this(max, 0, 0, 1, 1, frequency);
     }
 
+
+    // constructor that creates objects as a cubic function
     public IntRandomiser(int max, int a, int b, int c, int d, int freq) {
-        number = 0;
+
+        index = 0;
         randomGen = new MersenneTwister();
-        int size = (max+1) * freq;
-        List<SortingElement<Integer>> mat = new ArrayList<SortingElement<Integer>>();
+        int size = 2*(max+1) * freq;
+
+        List<SortingElement<Integer>> mat = new ArrayList<>();
         int k;
         int val;
-        for (int x = 0; x<=max; x++) {
-            val = a*x^(3) + b*x^2 + c*x + d;
-            for (int n = 1; n<=freq; n++) {
+
+        for (int x = 0; x<max; x++) {
+            
+            double dub = a*Math.pow(x,3) + b*Math.pow(x, 2) + c*x + d;
+            val = (int) dub;
+
+            for (int n = 0; n<freq; n++) {
+
                 k = randomGen.nextInt(size);
-                mat.add(new SortingElement<Integer>(val, k));
+
+                mat.add(new SortingElement<>(val, k));
+
+
             }
         }
+
         mat.sort(new Comparer());
-        matroid = new ArrayList<Integer>();
+
+        matroid = new ArrayList<>();
         for (SortingElement<Integer> aMat : mat) {
             matroid.add(aMat.getValue());
+
         }
-        solution = new HashSet<Integer>();
+        solution = new HashSet<>();
+
     }
 
     @Override
     public Integer getItem() {
-        return matroid.get(number);
+        return matroid.get(index);
     }
 
     @Override
-    public Set<Integer> getMatroid() {
-        return new HashSet<Integer>(matroid);
+    public List<Integer> getMatroid() {
+        return matroid;
     }
 
     @Override
@@ -100,17 +88,17 @@ public class IntRandomiser implements Randomiser<Integer> {
     }
 
     private void alert() {
-        number++;
+        index++;
     }
 
     @Override
     public int getIndex() {
-        return number;
+        return index;
     }
 
     @Override
     public Set<Integer> getAlreadySeen() {
-        List<Integer> alreadySeen = matroid.subList(0, number);
+        List<Integer> alreadySeen = matroid.subList(0, index);
         return new HashSet<Integer>(alreadySeen);
     }
 

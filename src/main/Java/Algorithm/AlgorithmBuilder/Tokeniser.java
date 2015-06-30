@@ -29,13 +29,15 @@ public class Tokeniser {
         add("max", 8); // maximum seen element
         add("size", 9); // matroid size
         add("=", 10); // equals
-        add("[0-9]+.[0-9]+", 11); // number
+        add("[0123456789]+.[0123456789]+", 11); // number
+        add("[0123456789]", 11); //number
         add("Step\\{", 12); // begin step
         add("\\}", 13); // end step
         add("add", 14); // add, if oracle says yes
-        add("[*/]", 15); // mult or divide
+        add("[+-]", 15); // plus or minus
+        add("[*/]", 16); // mult or divide
         add("\\(", 17); // open bracket
-        add("\\)", 16); // close bracket
+        add("\\)", 18); // close bracket
 
     }
 
@@ -66,12 +68,17 @@ public class Tokeniser {
 
         try {
             file = readFile(fileLocation);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
+        file = file.replaceAll("\\s", "");
+
         tokens.clear();
-        while (!file.equals("")) {
+        while (!file.equals("Z")) {
             boolean match = false;
+
+
             for (TokenInfo info : tokenInfos) {
                 Matcher m = info.regex.matcher(file);
                 if (m.find()) {
@@ -79,10 +86,14 @@ public class Tokeniser {
                     String tok = m.group().trim();
                     tokens.add(new Token(info.token, tok));
                     file = m.replaceFirst("");
-                    break;
                 }
             }
-            if (!match) throw new RuntimeException("Unexpected character in input: "+file);
+
+            if (!match) {
+                if (!file.equals('Z')) {
+                    throw new RuntimeException("Unexpected character in input: " + file);
+                }
+            }
         }
     }
 

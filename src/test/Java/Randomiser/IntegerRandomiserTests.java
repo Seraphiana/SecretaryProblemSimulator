@@ -9,11 +9,10 @@ import Java.Controller.ModuleController;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
-import static junit.framework.Assert.assertNotSame;
-import static junit.framework.TestCase.assertEquals;
-import static org.mockito.Mockito.mock;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotSame;
+
 
 /**
  * Created by Fliss on 15/07/14.
@@ -22,20 +21,20 @@ public class IntegerRandomiserTests {
 
     @Test
     public void shouldGiveAListOfCandidatesTest() {
-        ModuleController controller = mock(ModuleController.class);
+
         Randomiser randomiser = new IntRandomiser(1, 4);
-        List<Integer> list = new ArrayList<Integer>();
-        list.add(1);
-        list.add(1);
-        list.add(1);
-        list.add(1);
-        assertEquals(list, randomiser.getMatroid());
+        List<Integer> expected = new ArrayList<>();
+        expected.add(1);
+        expected.add(1);
+        expected.add(1);
+        expected.add(1);
+        assertEquals(expected, randomiser.getMatroid());
     }
 
     @Test
     public void shouldAlsoGiveAListOfCandidatesTest() {
         Randomiser randomiser = new IntRandomiser(1);
-        List<Integer> list = new ArrayList<Integer>();
+        List<Integer> list = new ArrayList<>();
         list.add(1);
         assertEquals(list, randomiser.getMatroid());
     }
