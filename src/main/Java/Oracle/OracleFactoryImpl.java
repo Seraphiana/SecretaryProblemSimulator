@@ -1,28 +1,25 @@
 package Java.Oracle;
 
 
-import Java.Constants.Constants;
-import Java.Controller.ModuleController;
+import Java.Constants.ProjectConstants;
 
 /**
  * Created by seraphiana on 31/07/14.
  */
-public class OracleFactoryImpl implements Java.Oracle.OracleFactory {
-    private final ModuleController controller;
+public class OracleFactoryImpl {
+    private String oracleType;
 
-
-    public OracleFactoryImpl(ModuleController controller) {
-        this.controller = controller;
+    public Oracle makeOracle() {
+//        switch (oracleType) {
+//            case ProjectConstants.SINGLECANDIDATE:
+                return SingleCandidateOracle.createSingleCandidateOracle();
+//
+//            default:
+//                return null;
+//        }
     }
 
-    @Override
-    public Oracle makeOracle(String oracleType) {
-        switch (oracleType) {
-            case Constants.SINGLECANDIDATE:
-                return SingleCandidateOracle.createSingleCandidateOracle(controller);
-
-            default:
-                return null;
-        }
+    public void update(String oracleType) {
+        this.oracleType = oracleType;
     }
 }

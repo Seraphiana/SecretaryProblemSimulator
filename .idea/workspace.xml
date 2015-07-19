@@ -2,61 +2,74 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="baa7086f-adae-41bd-bfff-db483f04d788" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/commons_math3_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/mockito_1_9.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/commons_math3_3_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/junit_4_10.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/mockito_all_1_9_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/libs/SecretaryProblemSimulator.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/css3-pie-1.0beta3.htc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/report.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/GUI/GUI.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/View/View.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/View/ViewImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/Java/View/View.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/Java/View/ViewImpl.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/Java/GUI/Controller.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Algorithm/AlgorithmFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Algorithm/AlgorithmFactoryImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Algorithm/ConventionalAlgorithm.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Algorithm/IntSecretaryAlgorithm.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Algorithm/SecretaryAlgorithm.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Constants/Constants.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Controller/ModuleController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Controller/ModuleControllerImpl$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Controller/ModuleControllerImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/GUI/GUIController$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Oracle/OracleAbs.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Oracle/OracleFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/SecretaryProblemSimulator/Java/Algorithm/ConventionalAlgorithmTests.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/SecretaryProblemSimulator/Java/Controller/moduleControllerTests.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/SecretaryProblemSimulator/Java/View/ViewTests.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmFactoryImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/Java/Algorithm/ConventionalAlgorithm.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/Java/Algorithm/IntSecretaryAlgorithm.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/Java/Algorithm/SecretaryAlgorithm.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/Java/Controller/ModuleController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/Java/Controller/ModuleControllerImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/Java/Oracle/OracleAbs.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/Java/Oracle/OracleFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/Java/Algorithm/ConventionalAlgorithmTests.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/Java/Controller/moduleControllerTests.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/Java/View/ViewTests.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/Java/Constants/Constants.java" afterPath="$PROJECT_DIR$/src/main/Java/Constants/ProjectConstants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Algorithm/AlgorithmBuilder/Algorithm.class" afterPath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Algorithm/AlgorithmBuilder/Algorithm.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Algorithm/AlgorithmBuilder/AlgorithmBuilder.class" afterPath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Algorithm/AlgorithmBuilder/AlgorithmBuilder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Algorithm/AlgorithmBuilder/CutoffClause.class" afterPath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Algorithm/AlgorithmBuilder/CutoffClause.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/SecretaryProblemSimulator/Java/RandomiserFactory/FactoryTests.class" afterPath="$PROJECT_DIR$/out/test/SecretaryProblemSimulator/Java/RandomiserFactory/FactoryTests.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/GUI/GUIController.class" afterPath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/GUI/GUIController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Randomiser/IntRandomiser.class" afterPath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Randomiser/IntRandomiser.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/SecretaryProblemSimulator/Java/Randomiser/IntegerRandomiserTests.class" afterPath="$PROJECT_DIR$/out/test/SecretaryProblemSimulator/Java/Randomiser/IntegerRandomiserTests.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Controller/ModuleController.class" afterPath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Controller/ModuleController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Controller/ModuleControllerImpl.class" afterPath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Controller/ModuleControllerImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/GUI/Main.class" afterPath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/GUI/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Oracle/OracleFactoryImpl.class" afterPath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Oracle/OracleFactoryImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Algorithm/AlgorithmBuilder/Parser$ParserException.class" afterPath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Algorithm/AlgorithmBuilder/Parser$ParserException.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Algorithm/AlgorithmBuilder/Parser.class" afterPath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Algorithm/AlgorithmBuilder/Parser.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Randomiser/Randomiser.class" afterPath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Randomiser/Randomiser.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Randomiser/RandomiserFactory.class" afterPath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Randomiser/RandomiserFactory.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Randomiser/RandomiserFactoryImpl.class" afterPath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Randomiser/RandomiserFactoryImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/SecretaryProblemSimulator/Java/Oracle/SCOracleTests.class" afterPath="$PROJECT_DIR$/out/test/SecretaryProblemSimulator/Java/Oracle/SCOracleTests.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Algorithm/SecretaryAlgorithm.class" afterPath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Algorithm/SecretaryAlgorithm.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Oracle/SingleCandidateOracle.class" afterPath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Oracle/SingleCandidateOracle.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Algorithm/AlgorithmBuilder/Token.class" afterPath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Algorithm/AlgorithmBuilder/Token.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Algorithm/AlgorithmBuilder/Tokeniser$TokenInfo.class" afterPath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Algorithm/AlgorithmBuilder/Tokeniser$TokenInfo.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Algorithm/AlgorithmBuilder/Tokeniser.class" afterPath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/Algorithm/AlgorithmBuilder/Tokeniser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/SecretaryProblemSimulator/Java/Algorithm/TokeniserTests.class" afterPath="$PROJECT_DIR$/out/test/SecretaryProblemSimulator/Java/Algorithm/TokeniserTests.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/Algorithm.java" afterPath="$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/Algorithm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/Java/Algorithm/ConventionalAlgorithmTests.java" afterPath="$PROJECT_DIR$/src/test/Java/Algorithm/ConventionalAlgorithmTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/CutoffClause.java" afterPath="$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/CutoffClause.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/AlgorithmBuilder.java" afterPath="$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/AlgorithmBuilder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/Java/RandomiserFactory/FactoryTests.java" afterPath="$PROJECT_DIR$/src/test/Java/RandomiserFactory/FactoryTests.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/GUI/GUI.fxml" afterPath="$PROJECT_DIR$/out/production/SecretaryProblemSimulator/Java/GUI/GUI.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/GUI/GUI.fxml" afterPath="$PROJECT_DIR$/src/main/Java/GUI/GUI.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/GUI/GUIController.java" afterPath="$PROJECT_DIR$/src/main/Java/GUI/GUIController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/Randomiser/IntRandomiser.java" afterPath="$PROJECT_DIR$/src/main/Java/Randomiser/IntRandomiser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/Java/Randomiser/IntegerRandomiserTests.java" afterPath="$PROJECT_DIR$/src/test/Java/Randomiser/IntegerRandomiserTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/Controller/ModuleController.java" afterPath="$PROJECT_DIR$/src/main/Java/Controller/ModuleController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/Controller/ModuleControllerImpl.java" afterPath="$PROJECT_DIR$/src/main/Java/Controller/ModuleControllerImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/GUI/Main.java" afterPath="$PROJECT_DIR$/src/main/Java/GUI/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/Oracle/Oracle.java" afterPath="$PROJECT_DIR$/src/main/Java/Oracle/Oracle.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/Oracle/OracleFactoryImpl.java" afterPath="$PROJECT_DIR$/src/main/Java/Oracle/OracleFactoryImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/Parser.java" afterPath="$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/Parser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/Randomiser/Randomiser.java" afterPath="$PROJECT_DIR$/src/main/Java/Randomiser/Randomiser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/Randomiser/RandomiserFactory.java" afterPath="$PROJECT_DIR$/src/main/Java/Randomiser/RandomiserFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/Randomiser/RandomiserFactoryImpl.java" afterPath="$PROJECT_DIR$/src/main/Java/Randomiser/RandomiserFactoryImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/Java/Oracle/SCOracleTests.java" afterPath="$PROJECT_DIR$/src/test/Java/Oracle/SCOracleTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SecretaryProblemSimulator.iml" afterPath="$PROJECT_DIR$/SecretaryProblemSimulator.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/Oracle/SingleCandidateOracle.java" afterPath="$PROJECT_DIR$/src/main/Java/Oracle/SingleCandidateOracle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/Token.java" afterPath="$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/Token.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/Tokeniser.java" afterPath="$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/Tokeniser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/Java/Algorithm/TokeniserTests.java" afterPath="$PROJECT_DIR$/src/test/Java/Algorithm/TokeniserTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Algorithms/test.txt" afterPath="$PROJECT_DIR$/src/Algorithms/test.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SecretaryProblemSimulator.iws" />
@@ -153,15 +166,92 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CutoffClause.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/CutoffClause.java">
+      <file leaf-file-name="GUIController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Java/GUI/GUIController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60301507">
-              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Java/GUI/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="62" column="28" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
               <folding>
-                <element signature="e#549#550#0" expanded="true" />
-                <element signature="e#582#583#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#2614#2615#0" expanded="true" />
+                <element signature="e#2645#2646#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Oracle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Java/Oracle/Oracle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Algorithm.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/Algorithm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+              <folding>
+                <element signature="e#675#676#0" expanded="true" />
+                <element signature="e#703#704#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SingleCandidateOracle.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/Java/Oracle/SingleCandidateOracle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5416667">
+              <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+              <folding>
+                <element signature="e#628#629#0" expanded="true" />
+                <element signature="e#670#671#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AlgorithmBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/AlgorithmBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/Parser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GUI.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Java/GUI/GUI.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="33" column="49" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -170,13 +260,33 @@
         <entry file="file://$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/Token.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Tokeniser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/Tokeniser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+              <folding>
+                <element signature="e#3049#3050#0" expanded="true" />
+                <element signature="e#3078#3079#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -378,25 +488,38 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/Java/Oracle/SingleCandidateOracle.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/Oracle/OracleFactoryImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/Randomiser/RandomiserFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/GUI/GUIController.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/test/Java/Oracle/SCOracleTests.java" />
-        <option value="$PROJECT_DIR$/src/test/Java/Randomiser/IntegerRandomiserTests.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/Randomiser/Randomiser.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/Randomiser/IntRandomiser.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/Randomiser/RandomiserFactoryImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/Java/RandomiserFactory/FactoryTests.java" />
         <option value="$PROJECT_DIR$/src/test/Java/Algorithm/ConventionalAlgorithmTests.java" />
         <option value="$PROJECT_DIR$/src/test/Java/Algorithm/TokeniserTests.java" />
         <option value="$PROJECT_DIR$/src/Algorithms/test.txt" />
-        <option value="$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/Tokeniser.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/Controller/ModuleControllerImpl.java" />
         <option value="$PROJECT_DIR$/src/main/Java/Controller/ModuleController.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/Algorithm.java" />
         <option value="$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/CutoffClause.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/Java/Controller/ModuleControllerImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/Algorithm/ConventionalAlgorithm.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/Algorithm/SecretaryAlgorithm.java" />
+        <option value="$PROJECT_DIR$/src/test/Java/Randomiser/IntegerRandomiserTests.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/Oracle/OracleAbs.java" />
+        <option value="$PROJECT_DIR$/src/test/Java/Oracle/SCOracleTests.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/GUI/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/Randomiser/RandomiserFactory.java" />
+        <option value="$PROJECT_DIR$/src/test/Java/RandomiserFactory/FactoryTests.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/Randomiser/Randomiser.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/Randomiser/IntRandomiser.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/GUI/GUI.fxml" />
+        <option value="$PROJECT_DIR$/src/main/Java/Constants/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/Oracle/OracleFactoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/GUI/GUIController.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/Token.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/Tokeniser.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/Parser.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/AlgorithmBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/Constants/ProjectConstants.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/Randomiser/RandomiserFactoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/Algorithm.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/GUI/Controller.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/Oracle/Oracle.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/Oracle/SingleCandidateOracle.java" />
       </list>
     </option>
   </component>
@@ -409,8 +532,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="722" />
+    <option name="width" value="1440" />
+    <option name="height" value="817" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -483,7 +606,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -515,6 +639,40 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SecretaryProblemSimulator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SecretaryProblemSimulator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Algorithm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -535,6 +693,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Randomiser" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -586,7 +748,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
+              <option name="myItemId" value="GUI" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -612,7 +774,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Algorithm" />
+              <option name="myItemId" value="Constants" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -635,10 +797,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Algorithm" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -666,8 +824,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -701,107 +858,29 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="Java.Algorithm.AlgorithmBuilder" />
-      <recent name="Java.View" />
-      <recent name="Java.GUI" />
-      <recent name="Java.Algorithm" />
-      <recent name="Oracle" />
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="algorithm" />
+      <recent name="controller" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Shared Documents\MSc docs\projectWork\SecretaryProblemSimulator\src" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Java.GUI" />
+      <recent name="Java.Algorithm.AlgorithmBuilder" />
+      <recent name="Java.View" />
+      <recent name="Java.Algorithm" />
+      <recent name="Oracle" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="Java.Oracle" />
       <recent name="" />
     </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="algorithm" />
-      <recent name="controller" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Shared Documents\MSc docs\projectWork\SecretaryProblemSimulator\src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TokeniserTests.shouldPrintSomeStuffTest">
-    <configuration default="false" name="FactoryTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Java.RandomiserFactory.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="SecretaryProblemSimulator" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="Java.RandomiserFactory" />
-      <option name="MAIN_CLASS_NAME" value="Java.RandomiserFactory.FactoryTests" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="SCOracleTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Java.Oracle.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="SecretaryProblemSimulator" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="Java.Oracle" />
-      <option name="MAIN_CLASS_NAME" value="Java.Oracle.SCOracleTests" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="ConventionalAlgorithmTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Java.Algorithm.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="SecretaryProblemSimulator" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="Java.Algorithm" />
-      <option name="MAIN_CLASS_NAME" value="Java.Algorithm.ConventionalAlgorithmTests" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="TokeniserTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -842,6 +921,73 @@
       <option name="MAIN_CLASS_NAME" value="Java.Algorithm.TokeniserTests" />
       <option name="METHOD_NAME" value="shouldPrintSomeStuffTest" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Java.GUI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="Java.GUI.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="SecretaryProblemSimulator" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="All in SecretaryProblemSimulator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="SecretaryProblemSimulator" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="SCOracleTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Java.Oracle.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="SecretaryProblemSimulator" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Java.Oracle" />
+      <option name="MAIN_CLASS_NAME" value="Java.Oracle.SCOracleTests" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -921,6 +1067,17 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
       <module name="" />
       <envs />
       <method />
@@ -1106,19 +1263,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.FactoryTests" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.SCOracleTests" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ConventionalAlgorithmTests" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.TokeniserTests" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TokeniserTests.shouldPrintSomeStuffTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.TokeniserTests" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.TokeniserTests.shouldPrintSomeStuffTest" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.All in SecretaryProblemSimulator" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.SCOracleTests" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TokeniserTests.shouldPrintSomeStuffTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TokeniserTests" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ConventionalAlgorithmTests" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.SCOracleTests" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.FactoryTests" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.SCOracleTests" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.All in SecretaryProblemSimulator" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TokeniserTests" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.TokeniserTests.shouldPrintSomeStuffTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1191,43 +1348,55 @@
       <workItem from="1435312146356" duration="349000" />
       <workItem from="1435391079572" duration="9686000" />
       <workItem from="1435480338487" duration="167000" />
-      <workItem from="1435508564599" duration="1728000" />
+      <workItem from="1435508564599" duration="2148000" />
+      <workItem from="1435755928246" duration="203000" />
+      <workItem from="1435855515199" duration="4057000" />
+      <workItem from="1435902913406" duration="5000" />
+      <workItem from="1435942085118" duration="1011000" />
+      <workItem from="1435994097312" duration="534000" />
+      <workItem from="1436010904065" duration="85000" />
+      <workItem from="1436011408844" duration="38000" />
+      <workItem from="1436013167707" duration="3881000" />
+      <workItem from="1436020543912" duration="10530000" />
+      <workItem from="1436264619091" duration="467000" />
+      <workItem from="1436265451250" duration="4741000" />
+      <workItem from="1437302706715" duration="13000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163735000" />
+    <option name="totallyTimeSpent" value="189720000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="722" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="817" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31707317" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20564516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32637855" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32249323" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.01796875" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09166667" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34762633" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17777778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34450403" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3265306" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32258064" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31903484" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1274,7 +1443,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1283,10 +1452,69 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/Java/Randomiser/IntRandomiser.java">
+    <entry file="file://$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/Algorithm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#675#676#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/Oracle/OracleFactoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Java/Oracle/SCOracleTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/Oracle/SingleCandidateOracle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/Algorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#675#676#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/Oracle/OracleFactoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Java/Oracle/SCOracleTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/Oracle/SingleCandidateOracle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1350,97 +1578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Java/Controller/moduleControllerTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Java/View/ViewTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/Oracle/Oracle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/Constants/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30111524">
-          <caret line="9" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmFactoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2007435">
-          <caret line="6" column="37" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/Algorithm/ConventionalAlgorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/GUI/GUIModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/Algorithm/IntSecretaryAlgorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41666666">
-          <caret line="10" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/GUI/GUI.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/Algorithm/SecretaryAlgorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3938731">
-          <caret line="10" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/GUI/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35560858">
-          <caret line="29" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/Parser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2535211">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1451,46 +1588,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/Oracle/OracleFactoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40140846">
-          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/Randomiser/RandomiserFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/GUI/GUIController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="82" column="10" selection-start-line="82" selection-start-column="10" selection-end-line="82" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/Oracle/OracleAbs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/Oracle/SingleCandidateOracle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -1515,41 +1616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Java/Randomiser/IntegerRandomiserTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/Randomiser/Randomiser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/Randomiser/IntRandomiser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/Randomiser/RandomiserFactoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Java/RandomiserFactory/FactoryTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="61" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/Java/GUI/GuiTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15432099">
@@ -1557,10 +1623,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Java/Algorithm/ConventionalAlgorithmTests.java">
+    <entry file="file://$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/CutoffClause.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.7777777">
+          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12631579">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Java/Randomiser/IntegerRandomiserTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Java/Oracle/SCOracleTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03275109">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/javafx-src.zip!/javafx/application/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="318" column="16" selection-start-line="318" selection-start-column="16" selection-end-line="318" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/GUI/GUIModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Java/RandomiserFactory/FactoryTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/Randomiser/Randomiser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/Oracle/OracleFactoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Java/Algorithm/TokeniserTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34497815">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/Randomiser/IntRandomiser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4206128">
+          <caret line="81" column="16" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/src.zip!/java/util/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22776572">
+          <caret line="789" column="13" selection-start-line="789" selection-start-column="13" selection-end-line="789" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1568,75 +1713,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Java/Algorithm/TokeniserTests.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/src.zip!/java/util/regex/Matcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7453416">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Java/Oracle/SCOracleTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.099378884">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding />
+        <state vertical-scroll-proportion="0.33188722">
+          <caret line="104" column="19" selection-start-line="104" selection-start-column="19" selection-end-line="104" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/Tokeniser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0559006">
-          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/AlgorithmBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3416149">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/Oracle/OracleFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1552795">
-          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/Controller/ModuleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5962733">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/Controller/ModuleControllerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2173913">
-          <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/Algorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.031055901">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#565#566#0" expanded="true" />
+            <element signature="e#3049#3050#0" expanded="true" />
+            <element signature="e#3078#3079#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1644,18 +1737,109 @@
     <entry file="file://$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/Token.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/CutoffClause.java">
+    <entry file="file://$PROJECT_DIR$/src/main/Java/GUI/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60301507">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/GUI/GUIController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/GUI/GUI.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="49" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/AlgorithmBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/Randomiser/RandomiserFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/Constants/ProjectConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39045554">
+          <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/Randomiser/RandomiserFactoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7114968">
+          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/Algorithm/AlgorithmBuilder/Algorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
           <folding>
-            <element signature="e#549#550#0" expanded="true" />
-            <element signature="e#582#583#0" expanded="true" />
+            <element signature="e#675#676#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/GUI/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="28" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2614#2615#0" expanded="true" />
+            <element signature="e#2645#2646#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/Oracle/Oracle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/Oracle/SingleCandidateOracle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5416667">
+          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+          <folding>
+            <element signature="e#628#629#0" expanded="true" />
+            <element signature="e#670#671#0" expanded="true" />
           </folding>
         </state>
       </provider>

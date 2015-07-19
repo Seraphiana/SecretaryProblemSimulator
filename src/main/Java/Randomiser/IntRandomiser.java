@@ -11,9 +11,9 @@ import org.apache.commons.math3.random.MersenneTwister;
  * Created by Fliss on 15/07/14.
  */
 public class IntRandomiser implements Randomiser<Integer> {
+    private final int size;
     private List<Integer> matroid;
     private int index;
-    private MersenneTwister randomGen;
     private Set<Integer> solution;
 
 
@@ -28,11 +28,11 @@ public class IntRandomiser implements Randomiser<Integer> {
 
 
     // constructor that creates objects as a cubic function
-    public IntRandomiser(int max, int a, int b, int c, int d, int freq) {
+    public IntRandomiser(long max, long a, long b, long c, long d, int freq) {
 
         index = 0;
-        randomGen = new MersenneTwister();
-        int size = 2*(max+1) * freq;
+        MersenneTwister randomGen = new MersenneTwister();
+        size = (int) (2*(max+1) * freq);
 
         List<SortingElement<Integer>> mat = new ArrayList<>();
         int k;
@@ -100,6 +100,11 @@ public class IntRandomiser implements Randomiser<Integer> {
     public Set<Integer> getAlreadySeen() {
         List<Integer> alreadySeen = matroid.subList(0, index);
         return new HashSet<Integer>(alreadySeen);
+    }
+
+    @Override
+    public int getSize() {
+        return size;
     }
 
 }

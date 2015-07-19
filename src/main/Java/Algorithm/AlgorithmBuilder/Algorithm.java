@@ -9,6 +9,7 @@ public class Algorithm {
     private List<IfClause> ifClauses;
     private CutoffClause cutOff;
 
+
     private Algorithm(List<IfClause> ifClauses, CutoffClause cutOff) {
         this.cutOff=cutOff;
         this.ifClauses = ifClauses;
@@ -24,5 +25,9 @@ public class Algorithm {
 
     public List<IfClause> getIfClauses() {
         return ifClauses;
+    }
+
+    public boolean consider() {
+        return false;
     }
 }

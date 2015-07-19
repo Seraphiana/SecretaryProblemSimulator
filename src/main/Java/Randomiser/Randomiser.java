@@ -19,4 +19,6 @@ public interface Randomiser<T extends Comparable<T>> {
     int getIndex();
 
     Set<T> getAlreadySeen();
+
+    int getSize();
 }

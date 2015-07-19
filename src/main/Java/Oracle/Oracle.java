@@ -9,4 +9,5 @@ public interface Oracle<T> {
 
     boolean consider(T value);
 
+    String solution();
 }

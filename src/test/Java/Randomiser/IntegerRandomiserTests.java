@@ -1,10 +1,6 @@
 package Java.Randomiser;
 
-import Java.Oracle.Oracle;
-import Java.Oracle.SingleCandidateOracle;
 import org.junit.Test;
-
-import Java.Controller.ModuleController;
 
 import java.util.ArrayList;
 import java.util.HashSet;

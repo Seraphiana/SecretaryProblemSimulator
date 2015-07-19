@@ -17,6 +17,7 @@ public class Parser {
     public Parser() {
         tokens = new LinkedList<Token>();
         queue = new LinkedList<Token>();
+        ifClauses = new LinkedList<>();
     }
 
 
@@ -28,30 +29,36 @@ public class Parser {
         algorithm();
 
         if (lookahead.token != Token.EPSILON) {
-            throw new ParserException("Unexpected Symbol found", lookahead);
+            throw new ParserException("Unexpected Symbol found" + lookahead.token + tokens.peek().token, lookahead);
         }
 
     }
 
     private void algorithm() {
+
         while (lookahead.token != Token.STEP) {
+
             queue.add(tokens.pop());
+            lookahead = tokens.peek();
         }
         evaluateCutoff();
         tokens.pop();
         while (lookahead.token != Token.ENDSTEP) {
             while (lookahead.token != Token.ADD) {
                 queue.add(tokens.pop());
+                lookahead = tokens.peek();
             }
             tokens.pop();
+            lookahead = tokens.peek();
             evaluateIfClause();
         }
         tokens.pop();
+        lookahead = tokens.peek();
     }
 
     private void evaluateIfClause() {
         ifClauses.add(new IfClause(queue));
-        queue = new LinkedList<Token>();
+        queue = new LinkedList<>();
 
     }
 

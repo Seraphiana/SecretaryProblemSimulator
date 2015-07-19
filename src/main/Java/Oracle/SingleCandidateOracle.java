@@ -1,27 +1,34 @@
 package Java.Oracle;
 
 
-import Java.Controller.ModuleController;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
 
 /**
  * Created by Fliss on 04/07/14.
  */
-public class SingleCandidateOracle<T> extends OracleAbs<T> implements Oracle<T> {
+public class SingleCandidateOracle<T extends Comparable> implements Oracle<T> {
+    ArrayList<T> solution;
 
-
-    private SingleCandidateOracle(ModuleController controller) {
-        super(controller);
+    private SingleCandidateOracle() {
+        solution = new ArrayList<>();
     }
 
-    public static SingleCandidateOracle createSingleCandidateOracle(ModuleController controller) {
-        return new SingleCandidateOracle(controller);
+    public static SingleCandidateOracle createSingleCandidateOracle() {
+        return new SingleCandidateOracle();
     }
 
     @Override
-    public boolean consider(T value) {
-        return getController().getSolution().isEmpty();
+    public boolean consider(T obj) {
+        if (solution.isEmpty()) {
+            solution.add(obj);
+
+            return true;
+        } else return false;
+    }
+
+    @Override
+    public String solution() {
+        return solution.toString();
     }
 
 

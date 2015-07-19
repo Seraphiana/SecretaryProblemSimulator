@@ -1,21 +1,19 @@
 package Java.GUI;
 
-import Java.Algorithm.SecretaryAlgorithm;
-import Java.Controller.ModuleController;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.*;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
-import javafx.util.StringConverter;
 
+import javax.xml.soap.Text;
+import java.awt.*;
+import java.awt.TextArea;
 import java.net.URL;
-import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class GUIController implements Initializable {
@@ -27,10 +25,15 @@ public class GUIController implements Initializable {
     public TextField b;
     @FXML
     public TextField a;
+    public javafx.scene.text.Text solution;
+    public ChoiceBox oracleChoice;
+    public GridPane bottomeGrid;
+    public TextField max;
+    public TextField freq;
+
+
     @FXML
-    private GridPane choiceGrid;
-    @FXML
-    private ChoiceBox<SecretaryAlgorithm> algorithmChoice;
+    private TextField algorithmChoice;
     @FXML
     private GridPane topGrid;
     @FXML
@@ -40,50 +43,39 @@ public class GUIController implements Initializable {
     @FXML
     private AnchorPane basePane;
     @FXML
-    private Pane solutionPane;
+    private GridPane solutionGrid;
     @FXML
     private Pane inPane;
     @FXML
-    private ChoiceBox<?> matroidChoice;
-    private ModuleController moduleController;
+    private ChoiceBox matroidChoice;
 
 
-    public GUIController(ModuleController moduleController) {
-        moduleController = this.moduleController;
+    private Controller controller;
+
+
+    public GUIController() {
+
 
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        algorithmChoice = new ChoiceBox<>(moduleController.getAlgChoice());
-        basePane = new AnchorPane();
-        choiceGrid = new GridPane();
-        topGrid = new GridPane();
-        stopButton = new Button();
-        runButton = new Button();
-        solutionPane = new Pane();
-        inPane = new Pane();
-        matroidChoice = new ChoiceBox<>();
+        controller = new Controller();
+        matroidChoice.setItems(FXCollections.observableArrayList(controller.getMatroids()));
+        oracleChoice.setItems(FXCollections.observableArrayList(controller.getOracles()));
+        System.out.println(algorithmChoice.getCharacters().toString());
+
 
         stopButton.setOnAction(actionEvent -> {
-
+            controller.stop();
         });
 
         runButton.setOnAction(actionEvent -> {
-
+            String[] buildData = new String[]{max.getCharacters().toString(), a.getCharacters().toString(), b.getCharacters().toString(),
+                    c.getCharacters().toString(), d.getCharacters().toString(), freq.getCharacters().toString()};
+            solution.setText(controller.run(buildData, algorithmChoice.getCharacters().toString(), (String) matroidChoice.getValue(), (String) oracleChoice.getValue()));
         });
 
-        algorithmChoice.setConverter(new StringConverter<SecretaryAlgorithm>() {
-            @Override
-            public String toString(SecretaryAlgorithm secretaryAlgorithm) {
-                return secretaryAlgorithm.toString();
-            }
-
-            @Override
-            public SecretaryAlgorithm fromString(String s) {
-                return moduleController.getAlgorithmName(s);
-            }
-        });
 
 
 

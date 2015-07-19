@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 /**
  * Created by seraphiana on 02/12/14.
  */
@@ -29,31 +30,32 @@ public class Tokeniser {
         add("max", 8); // maximum seen element
         add("size", 9); // matroid size
         add("=", 10); // equals
-        add("[0123456789]+.[0123456789]+", 11); // number
-        add("[0123456789]", 11); //number
-        add("Step\\{", 12); // begin step
+        add("[0123456789]+.[0123456789]+", 12); // number
+        add("[0123456789]", 12); //number
+        add("Step\\{", 11); // begin step
         add("\\}", 13); // end step
         add("add", 14); // add, if oracle says yes
         add("[+-]", 15); // plus or minus
         add("[*/]", 16); // mult or divide
         add("\\(", 17); // open bracket
         add("\\)", 18); // close bracket
+        add("Z", -1); //End program
 
     }
 
     private void add(String regex, int token) {
         tokenInfos.add(
                 new TokenInfo(
-                  Pattern.compile("^("+regex+")"), token));
+                        Pattern.compile("^(" + regex + ")"), token));
     }
 
 
     private String readFile(String fileLocation) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new FileReader(fileLocation));
         try {
-            StringBuilder stringBuilder =new StringBuilder();
+            StringBuilder stringBuilder = new StringBuilder();
             String line = bufferedReader.readLine();
-            while (line!=null) {
+            while (line != null) {
                 stringBuilder.append(line);
                 stringBuilder.append("\n");
                 line = bufferedReader.readLine();
@@ -75,7 +77,7 @@ public class Tokeniser {
         file = file.replaceAll("\\s", "");
 
         tokens.clear();
-        while (!file.equals("Z")) {
+        while (!file.equals("")) {
             boolean match = false;
 
 
@@ -90,9 +92,9 @@ public class Tokeniser {
             }
 
             if (!match) {
-                if (!file.equals('Z')) {
-                    throw new RuntimeException("Unexpected character in input: " + file);
-                }
+
+                throw new RuntimeException("Unexpected character in input: " + file);
+
             }
         }
     }
