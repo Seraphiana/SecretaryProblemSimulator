@@ -29,23 +29,15 @@ public class Controller {
         randomiserFactory = new RandomiserFactoryImpl();
         oracleFactory = new OracleFactoryImpl();
         algorithmBuilder = new AlgorithmBuilder();
-
-
     }
 
 
-    public ObservableList<String> getMatroids() {
-        List<String> matroidChoices = new ArrayList<>();
 
-        matroidChoices.add("Select Matroid Type");
-        matroidChoices.add("Integer");
-
-        return FXCollections.observableArrayList(matroidChoices);
-    }
 
 
     public String run(String[] buildData, String algChoice, String matroidChoice, String oracleType) {
         constants = new ProjectConstants();
+
         updateAll(buildData, algChoice, matroidChoice, oracleType);
         Oracle oracle = oracleFactory.makeOracle();
         Algorithm algorithm = algorithmBuilder.buildAlgorithm();
@@ -53,30 +45,34 @@ public class Controller {
         running = true;
 
         for (int i = 0; i < randomSet.getSize(); i++) {
+
             if (!running) {
                 break;
             }
-            if(algorithm.consider()) {
+            System.out.println(randomSet.getItem());
+            System.out.println(algorithm.consider(randomSet.getItem(), i));
+            if(algorithm.consider(randomSet.getItem(), i)) {
                 oracle.consider(randomSet.getItem());
             }
+            randomSet.alert();
         }
         return oracle.solution();
     }
 
     private void updateAll(String[] buildData, String algChoice, String matroidChoice, String oracleType) {
-        long[] buildDataAsLongs = new long[buildData.length];
+        double[] buildDataAsDoubles = new double[buildData.length];
         int index = 0;
         for (int i = 0; i < buildData.length; i++) {
             try {
-                buildDataAsLongs[index] = Long.parseLong(buildData[i]);
+                buildDataAsDoubles[index] = Double.parseDouble(buildData[i]);
+                index++;
             } catch (NumberFormatException e) {
                 errors.add("invalid input in field" + i);
             }
         }
-
-        randomiserFactory.update(matroidChoice, buildDataAsLongs);
+        randomiserFactory.update(matroidChoice, buildDataAsDoubles);
         oracleFactory.update(oracleType);
-        algorithmBuilder.update(algChoice);
+        algorithmBuilder.update(algChoice, (int) (buildDataAsDoubles[0]* buildDataAsDoubles[5]));
     }
 
     public void stop() {
@@ -88,6 +84,15 @@ public class Controller {
         oracles.add("Select Solution Restriction");
         oracles.add("Single Candidate");
         return FXCollections.observableArrayList(oracles);
+    }
+
+    public ObservableList<String> getMatroids() {
+        List<String> matroidChoices = new ArrayList<>();
+
+        matroidChoices.add("Select Matroid Type");
+        matroidChoices.add("Integer");
+
+        return FXCollections.observableArrayList(matroidChoices);
     }
 }
 

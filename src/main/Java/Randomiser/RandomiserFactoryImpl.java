@@ -7,11 +7,11 @@ import Java.Constants.ProjectConstants;
  */
 public class RandomiserFactoryImpl implements RandomiserFactory {
     private String randomiserType;
-    private long[] buildInfo;
+    private double[] buildInfo;
 
 
     public RandomiserFactoryImpl() {
-        buildInfo = new long[]{0, 0, 0, 0, 0, 0, 0, 0};
+        buildInfo = new double[]{0, 0, 0, 0, 0, 0, 0, 0};
         randomiserType = "";
 
     }
@@ -29,7 +29,7 @@ public class RandomiserFactoryImpl implements RandomiserFactory {
 
 
     @Override
-    public void update(String randomiserType, long[] buildData) {
+    public void update(String randomiserType, double[] buildData) {
         this.randomiserType = randomiserType;
         int size = 8;
         if (buildData.length < 8) {

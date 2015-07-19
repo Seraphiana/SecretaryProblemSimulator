@@ -24,4 +24,21 @@ public class CutoffClause {
     public Queue<Token> getExpression() {
         return expression;
     }
+
+    public int calculateCutOff(int sampleSize) {
+        if (expression.peek().token==9) {
+            expression.remove();
+        }
+        return calculate(sampleSize);
+    }
+
+    private int calculate(int currentTotal) {
+        if (expression.isEmpty()) {
+            return currentTotal;
+        }
+        Token token = expression.remove();
+
+
+        return calculate(currentTotal);
+    }
 }

@@ -28,11 +28,12 @@ public class IntRandomiser implements Randomiser<Integer> {
 
 
     // constructor that creates objects as a cubic function
-    public IntRandomiser(long max, long a, long b, long c, long d, int freq) {
+    public IntRandomiser(double max, double a, double b, double c, double d, double freq) {
 
         index = 0;
         MersenneTwister randomGen = new MersenneTwister();
-        size = (int) (2*(max+1) * freq);
+
+        size = (int) ((max) * freq);
 
         List<SortingElement<Integer>> mat = new ArrayList<>();
         int k;
@@ -44,9 +45,7 @@ public class IntRandomiser implements Randomiser<Integer> {
             val = (int) dub;
 
             for (int n = 0; n<freq; n++) {
-
                 k = randomGen.nextInt(size);
-
                 mat.add(new SortingElement<>(val, k));
 
 
@@ -58,10 +57,8 @@ public class IntRandomiser implements Randomiser<Integer> {
         matroid = new ArrayList<>();
         for (SortingElement<Integer> aMat : mat) {
             matroid.add(aMat.getValue());
-
         }
         solution = new HashSet<>();
-
     }
 
     @Override
@@ -87,7 +84,8 @@ public class IntRandomiser implements Randomiser<Integer> {
         return solution;
     }
 
-    private void alert() {
+    @Override
+    public void alert() {
         index++;
     }
 

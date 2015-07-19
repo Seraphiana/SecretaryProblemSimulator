@@ -73,7 +73,9 @@ public class GUIController implements Initializable {
         runButton.setOnAction(actionEvent -> {
             String[] buildData = new String[]{max.getCharacters().toString(), a.getCharacters().toString(), b.getCharacters().toString(),
                     c.getCharacters().toString(), d.getCharacters().toString(), freq.getCharacters().toString()};
-            solution.setText(controller.run(buildData, algorithmChoice.getCharacters().toString(), (String) matroidChoice.getValue(), (String) oracleChoice.getValue()));
+            String result = controller.run(buildData, algorithmChoice.getCharacters().toString(), (String) matroidChoice.getValue(), (String) oracleChoice.getValue());
+            System.out.println(result);
+            solution.setText(result);
         });
 
 

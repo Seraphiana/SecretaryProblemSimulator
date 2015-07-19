@@ -6,5 +6,5 @@ package Java.Randomiser;
 public interface RandomiserFactory {
     Randomiser createRandomiser();
 
-    void update(String randomiserType, long[] buildData);
+    void update(String randomiserType, double[] buildData);
 }

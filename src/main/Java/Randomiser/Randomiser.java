@@ -16,6 +16,8 @@ public interface Randomiser<T extends Comparable<T>> {
 
     Set<T> getSolution();
 
+    void alert();
+
     int getIndex();
 
     Set<T> getAlreadySeen();

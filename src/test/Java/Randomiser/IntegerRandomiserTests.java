@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotSame;
 
@@ -58,5 +60,11 @@ public class IntegerRandomiserTests {
         Randomiser<Integer> randomiser = new IntRandomiser(3);
         randomiser.itemDecision(true);
         assertNotSame(new HashSet<Integer>(), randomiser.getSolution());
+    }
+
+    @Test
+    public void shouldHaveTheCorrectSizeTest() {
+        Randomiser<Integer> randomiser = new IntRandomiser(1);
+        assertThat(randomiser.getSize(), is(2));
     }
 }

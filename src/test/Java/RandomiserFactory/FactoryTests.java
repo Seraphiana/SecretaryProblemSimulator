@@ -17,7 +17,7 @@ public class FactoryTests {
     @Test
     public void shouldGiveAnIntRandomiser() {
         RandomiserFactory randomiserFactory = new RandomiserFactoryImpl();
-        long[] buildData = {1,1,1,1,1};
+        double[] buildData = {1,1,1,1,1};
         randomiserFactory.update(ProjectConstants.INTEGER, buildData);
         Randomiser randomiser = randomiserFactory.createRandomiser();
 
