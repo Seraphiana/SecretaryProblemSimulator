@@ -105,4 +105,19 @@ public class IntRandomiser implements Randomiser<Integer> {
         return size;
     }
 
+    @Override
+    public String toString() {
+        String matroidContents = "";
+        int num = 1;
+        for (Integer element : matroid) {
+            matroidContents += element+", ";
+            if (num==10) {
+                matroidContents += "\r";
+                num=0;
+            }
+            num++;
+        }
+        return matroidContents;
+    }
+
 }

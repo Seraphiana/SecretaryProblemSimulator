@@ -24,6 +24,7 @@ public class Controller {
     private List errors;
     private ProjectConstants constants;
     private boolean running;
+    private Randomiser randomSet;
 
     public Controller() {
         randomiserFactory = new RandomiserFactoryImpl();
@@ -41,7 +42,7 @@ public class Controller {
         updateAll(buildData, algChoice, matroidChoice, oracleType);
         Oracle oracle = oracleFactory.makeOracle();
         Algorithm algorithm = algorithmBuilder.buildAlgorithm();
-        Randomiser randomSet = randomiserFactory.createRandomiser();
+        randomSet = randomiserFactory.createRandomiser();
         running = true;
 
         for (int i = 0; i < randomSet.getSize(); i++) {
@@ -93,6 +94,10 @@ public class Controller {
         matroidChoices.add("Integer");
 
         return FXCollections.observableArrayList(matroidChoices);
+    }
+
+    public String getMatroid() {
+        return randomSet.toString();
     }
 }
 

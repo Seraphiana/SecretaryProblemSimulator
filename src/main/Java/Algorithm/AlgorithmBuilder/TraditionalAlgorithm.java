@@ -25,7 +25,7 @@ public class TraditionalAlgorithm implements Algorithm {
         }
 
         if (index>=cutOff) {
-            if (maximum.compareTo(object)<0)
+            if (maximum.compareTo(object)<=0)
             return true;
         }
 

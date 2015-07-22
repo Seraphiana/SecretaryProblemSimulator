@@ -23,4 +23,6 @@ public interface Randomiser<T extends Comparable<T>> {
     Set<T> getAlreadySeen();
 
     int getSize();
+
+    String toString();
 }

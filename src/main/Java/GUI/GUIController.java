@@ -30,6 +30,8 @@ public class GUIController implements Initializable {
     public GridPane bottomeGrid;
     public TextField max;
     public TextField freq;
+    @FXML
+    public javafx.scene.text.Text matroidContents;
 
 
     @FXML
@@ -74,8 +76,9 @@ public class GUIController implements Initializable {
             String[] buildData = new String[]{max.getCharacters().toString(), a.getCharacters().toString(), b.getCharacters().toString(),
                     c.getCharacters().toString(), d.getCharacters().toString(), freq.getCharacters().toString()};
             String result = controller.run(buildData, algorithmChoice.getCharacters().toString(), (String) matroidChoice.getValue(), (String) oracleChoice.getValue());
-            System.out.println(result);
+            System.out.println("====>" +result);
             solution.setText(result);
+            matroidContents.setText(controller.getMatroid().toString());
         });
 
 
