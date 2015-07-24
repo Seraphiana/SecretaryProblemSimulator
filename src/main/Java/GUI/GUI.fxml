@@ -39,17 +39,24 @@
             </children>
         </GridPane>
 
-        <GridPane fx:id="solutionGrid" alignment="CENTER" layoutX="10" layoutY="200" prefHeight="100.0"
+        <GridPane fx:id="solutionGrid" alignment="TOP_CENTER" layoutX="10" layoutY="240" prefHeight="100.0"
                   prefWidth="200.0">
             <children>
                 <Text text="Solution" GridPane.rowIndex="0"/>
                 <Text text="" fx:id="solution" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
             </children>
         </GridPane>
-        <GridPane fx:id="matroidGrid" alignment="TOP_RIGHT" layoutX="420" layoutY="10" prefWidth="250" prefHeight="500">
+        <GridPane fx:id="matroidGrid" alignment="TOP_CENTER" layoutX="420" layoutY="10" prefWidth="250" prefHeight="500">
             <children>
                 <Text text="Matroid contents" GridPane.rowIndex="0"/>
                 <Text text="" fx:id="matroidContents" GridPane.rowIndex="1"/>
+            </children>
+
+        </GridPane>
+        <GridPane fx:id="optimalSolutionGrid" alignment="TOP_CENTER" layoutX="200" layoutY="10" prefWidth="250" prefHeight="500">
+            <children>
+                <Text text="Optimal solution" GridPane.rowIndex="0"/>
+                <Text text="" fx:id="optimalSolution" GridPane.rowIndex="1"/>
             </children>
 
         </GridPane>

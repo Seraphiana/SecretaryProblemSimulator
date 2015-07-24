@@ -25,6 +25,7 @@ public class Controller {
     private ProjectConstants constants;
     private boolean running;
     private Randomiser randomSet;
+    private Oracle oracle;
 
     public Controller() {
         randomiserFactory = new RandomiserFactoryImpl();
@@ -40,7 +41,8 @@ public class Controller {
         constants = new ProjectConstants();
 
         updateAll(buildData, algChoice, matroidChoice, oracleType);
-        Oracle oracle = oracleFactory.makeOracle();
+
+        oracle = oracleFactory.makeOracle();
         Algorithm algorithm = algorithmBuilder.buildAlgorithm();
         randomSet = randomiserFactory.createRandomiser();
         running = true;
@@ -50,8 +52,6 @@ public class Controller {
             if (!running) {
                 break;
             }
-            System.out.println(randomSet.getItem());
-            System.out.println(algorithm.consider(randomSet.getItem(), i));
             if(algorithm.consider(randomSet.getItem(), i)) {
                 oracle.consider(randomSet.getItem());
             }
@@ -98,6 +98,10 @@ public class Controller {
 
     public String getMatroid() {
         return randomSet.toString();
+    }
+
+    public String getOptimalSet() {
+        return oracle.optimalSolution(randomSet.getMatroid());
     }
 }
 

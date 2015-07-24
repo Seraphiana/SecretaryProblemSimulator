@@ -2,14 +2,17 @@ package Java.Oracle;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Fliss on 04/07/14.
  */
 public class SingleCandidateOracle<T extends Comparable> implements Oracle<T> {
-    ArrayList<T> solution;
+    private ArrayList<T> solution;
+    private T maximum;
 
     private SingleCandidateOracle() {
+
         solution = new ArrayList<>();
     }
 
@@ -19,6 +22,7 @@ public class SingleCandidateOracle<T extends Comparable> implements Oracle<T> {
 
     @Override
     public boolean consider(T obj) {
+
         if (solution.isEmpty()) {
             solution.add(obj);
 
@@ -29,6 +33,19 @@ public class SingleCandidateOracle<T extends Comparable> implements Oracle<T> {
     @Override
     public String solution() {
         return solution.toString();
+    }
+
+    @Override
+    public String optimalSolution(List<T> objects) {
+        for (T object : objects) {
+            if (maximum==null){
+                maximum=object;
+            } else if (maximum.compareTo(object)<0) {
+                maximum=object;
+            }
+        }
+
+        return maximum.toString();
     }
 
 

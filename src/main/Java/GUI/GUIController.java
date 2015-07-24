@@ -32,6 +32,9 @@ public class GUIController implements Initializable {
     public TextField freq;
     @FXML
     public javafx.scene.text.Text matroidContents;
+    public GridPane matroidGrid;
+    public GridPane optimalSolutionGrid;
+    public javafx.scene.text.Text optimalSolution;
 
 
     @FXML
@@ -79,6 +82,7 @@ public class GUIController implements Initializable {
             System.out.println("====>" +result);
             solution.setText(result);
             matroidContents.setText(controller.getMatroid().toString());
+            optimalSolution.setText(controller.getOptimalSet());
         });
 
 

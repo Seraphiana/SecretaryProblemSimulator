@@ -1,5 +1,6 @@
 package Java.Oracle;
 
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -10,4 +11,6 @@ public interface Oracle<T> {
     boolean consider(T value);
 
     String solution();
+
+    String optimalSolution(List<T> matroid);
 }
