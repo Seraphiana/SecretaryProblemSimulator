@@ -34,25 +34,42 @@ public class Controller {
     }
 
 
-
-
-
     public String run(String[] buildData, String algChoice, String matroidChoice, String oracleType) {
+        running = true;
         constants = new ProjectConstants();
 
         updateAll(buildData, algChoice, matroidChoice, oracleType);
+        String[] error = new String[] {"", "", ""};
+        boolean runFailed = false;
+        if (algChoice.length()==0) {
+            error[0] = "an algorithm, ";
+            runFailed = true;
+        }
+        if (matroidChoice == null) {
+            error[1] = "a matroid, ";
+            runFailed = true;
+        }
+        if (oracleType == null) {
+            error[2] = "an oracleType, ";
+            runFailed = true;
+        }
+        if (runFailed) {
+            return ("You must select\r" + error[0] + "\r" + error[1] + "\r" + error[2] + "\r" + "to run.");
+        }
 
         oracle = oracleFactory.makeOracle();
         Algorithm algorithm = algorithmBuilder.buildAlgorithm();
         randomSet = randomiserFactory.createRandomiser();
-        running = true;
+        if (!running) {
+            return "";
+        }
 
         for (int i = 0; i < randomSet.getSize(); i++) {
 
             if (!running) {
-                break;
+                return "";
             }
-            if(algorithm.consider(randomSet.getItem(), i)) {
+            if (algorithm.consider(randomSet.getItem(), i)) {
                 oracle.consider(randomSet.getItem());
             }
             randomSet.alert();
@@ -73,7 +90,7 @@ public class Controller {
         }
         randomiserFactory.update(matroidChoice, buildDataAsDoubles);
         oracleFactory.update(oracleType);
-        algorithmBuilder.update(algChoice, (int) (buildDataAsDoubles[0]* buildDataAsDoubles[5]));
+        algorithmBuilder.update(algChoice, (int) (buildDataAsDoubles[0] * buildDataAsDoubles[5]));
     }
 
     public void stop() {
@@ -97,10 +114,16 @@ public class Controller {
     }
 
     public String getMatroid() {
+        if (randomSet==null) {
+            return "";
+        }
         return randomSet.toString();
     }
 
     public String getOptimalSet() {
+        if (oracle==null || randomSet==null) {
+            return "";
+        }
         return oracle.optimalSolution(randomSet.getMatroid());
     }
 }

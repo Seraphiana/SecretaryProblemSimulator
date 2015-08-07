@@ -79,10 +79,11 @@ public class GUIController implements Initializable {
             String[] buildData = new String[]{max.getCharacters().toString(), a.getCharacters().toString(), b.getCharacters().toString(),
                     c.getCharacters().toString(), d.getCharacters().toString(), freq.getCharacters().toString()};
             String result = controller.run(buildData, algorithmChoice.getCharacters().toString(), (String) matroidChoice.getValue(), (String) oracleChoice.getValue());
-            System.out.println("====>" +result);
             solution.setText(result);
-            matroidContents.setText(controller.getMatroid().toString());
-            optimalSolution.setText(controller.getOptimalSet());
+            if (!result.contains("You must select " )) {
+                matroidContents.setText(controller.getMatroid().toString());
+                optimalSolution.setText(controller.getOptimalSet());
+            }
         });
 
 

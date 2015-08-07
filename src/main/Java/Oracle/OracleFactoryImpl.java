@@ -10,13 +10,13 @@ public class OracleFactoryImpl {
     private String oracleType;
 
     public Oracle makeOracle() {
-//        switch (oracleType) {
-//            case ProjectConstants.SINGLECANDIDATE:
+        switch (oracleType) {
+            case ProjectConstants.SINGLECANDIDATE:
                 return SingleCandidateOracle.createSingleCandidateOracle();
-//
-//            default:
-//                return null;
-//        }
+
+            default:
+                return null;
+        }
     }
 
     public void update(String oracleType) {
