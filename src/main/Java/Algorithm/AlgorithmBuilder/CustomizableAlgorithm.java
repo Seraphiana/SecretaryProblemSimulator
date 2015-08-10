@@ -32,7 +32,11 @@ public class CustomizableAlgorithm<T extends Comparable> implements Algorithm<T>
         if (index<cutOffIndex) {
             return false;
         }
+        boolean passed = true;
+        for (IfClause ifClause : ifClauses) {
+            passed = ifClause.consider(object);
+        }
 
-        return false;
+        return passed;
     }
 }

@@ -20,26 +20,26 @@ public class Tokeniser {
         tokenInfos = new LinkedList<TokenInfo>();
         tokens = new LinkedList<Token>();
         fileLocation = filelocation;
-        add("x", 1); // current variable
-        add("n", 2); // item number
-        add("c", 3); // cutoff
-        add("if", 4); // if function
-        add("store", 5); // store value
-        add(">", 6); // greater than
-        add("<", 7); // less than
-        add("max", 8); // maximum seen element
-        add("size", 9); // matroid size
-        add("=", 10); // equals
-        add("[0123456789]+.[0123456789]+", 12); // number
-        add("[0123456789]", 12); //number
-        add("Step\\{", 11); // begin step
-        add("\\}", 13); // end step
-        add("add", 14); // add, if oracle says yes
-        add("[+-]", 15); // plus or minus
-        add("[*/]", 16); // mult or divide
-        add("\\(", 17); // open bracket
-        add("\\)", 18); // close bracket
-        add("Z", -1); //End program
+        add("x", Token.VAR); // current variable
+        add("n", Token.N); // item number
+        add("c", Token.CUTOFF); // cutoff
+        add("if", Token.IF); // if function
+        add("store", Token.STORE); // store value
+        add(">", Token.GREATER); // greater than
+        add("<", Token.LESS); // less than
+        add("max", Token.MAX); // maximum seen element
+        add("size", Token.SIZE); // matroid size
+        add("=", Token.EQUALS); // equals
+        add("[0123456789]+.[0123456789]+", Token.NUM); // number
+        add("[0123456789]", Token.NUM); //number
+        add("Step\\{", Token.STEP); // begin step
+        add("\\}", Token.ENDSTEP); // end step
+        add("add", Token.ADD); // add, if oracle says yes
+        add("[+-]", Token.PLUSMINUS); // plus or minus
+        add("[*/]", Token.TIMESDIVIDE); // mult or divide
+        add("\\(", Token.OPENBRACKET); // open bracket
+        add("\\)", Token.CLOSEBRACKET); // close bracket
+        add("Z", Token.EPSILON); //End program
 
     }
 

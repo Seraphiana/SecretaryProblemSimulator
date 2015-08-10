@@ -16,4 +16,9 @@ public class IfClause {
         return statement;
     }
 
+
+    //TODO not started
+    public <T extends Comparable> boolean consider(T object) {
+        return false;
+    }
 }

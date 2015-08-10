@@ -39,23 +39,8 @@ public class Controller {
         constants = new ProjectConstants();
 
         updateAll(buildData, algChoice, matroidChoice, oracleType);
-        String[] error = new String[] {"", "", ""};
-        boolean runFailed = false;
-        if (algChoice.length()==0) {
-            error[0] = "an algorithm, ";
-            runFailed = true;
-        }
-        if (matroidChoice == null) {
-            error[1] = "a matroid, ";
-            runFailed = true;
-        }
-        if (oracleType == null) {
-            error[2] = "an oracleType, ";
-            runFailed = true;
-        }
-        if (runFailed) {
-            return ("You must select\r" + error[0] + "\r" + error[1] + "\r" + error[2] + "\r" + "to run.");
-        }
+        String errors = getErrors(algChoice, matroidChoice, oracleType);
+        if (errors != null) return errors;
 
         oracle = oracleFactory.makeOracle();
         Algorithm algorithm = algorithmBuilder.buildAlgorithm();
@@ -77,22 +62,6 @@ public class Controller {
         return oracle.solution();
     }
 
-    private void updateAll(String[] buildData, String algChoice, String matroidChoice, String oracleType) {
-        double[] buildDataAsDoubles = new double[buildData.length];
-        int index = 0;
-        for (int i = 0; i < buildData.length; i++) {
-            try {
-                buildDataAsDoubles[index] = Double.parseDouble(buildData[i]);
-                index++;
-            } catch (NumberFormatException e) {
-                errors.add("invalid input in field" + i);
-            }
-        }
-        randomiserFactory.update(matroidChoice, buildDataAsDoubles);
-        oracleFactory.update(oracleType);
-        algorithmBuilder.update(algChoice, (int) (buildDataAsDoubles[0] * buildDataAsDoubles[5]));
-    }
-
     public void stop() {
         running = false;
     }
@@ -111,6 +80,43 @@ public class Controller {
         matroidChoices.add("Integer");
 
         return FXCollections.observableArrayList(matroidChoices);
+    }
+
+    private String getErrors(String algChoice, String matroidChoice, String oracleType) {
+        String[] error = new String[] {"", "", ""};
+        boolean runFailed = false;
+        if (algChoice.length()==0) {
+            error[0] = "an algorithm, ";
+            runFailed = true;
+        }
+        if (matroidChoice == null) {
+            error[1] = "a matroid, ";
+            runFailed = true;
+        }
+        if (oracleType == null) {
+            error[2] = "an oracleType, ";
+            runFailed = true;
+        }
+        if (runFailed) {
+            return ("You must select\r" + error[0] + "\r" + error[1] + "\r" + error[2] + "\r" + "to run.");
+        }
+        return null;
+    }
+
+    private void updateAll(String[] buildData, String algChoice, String matroidChoice, String oracleType) {
+        double[] buildDataAsDoubles = new double[buildData.length];
+        int index = 0;
+        for (int i = 0; i < buildData.length; i++) {
+            try {
+                buildDataAsDoubles[index] = Double.parseDouble(buildData[i]);
+                index++;
+            } catch (NumberFormatException e) {
+                errors.add("invalid input in field" + i);
+            }
+        }
+        randomiserFactory.update(matroidChoice, buildDataAsDoubles);
+        oracleFactory.update(oracleType);
+        algorithmBuilder.update(algChoice, (int) (buildDataAsDoubles[0] * buildDataAsDoubles[5]));
     }
 
     public String getMatroid() {
