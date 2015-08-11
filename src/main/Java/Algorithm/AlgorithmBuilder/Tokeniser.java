@@ -35,8 +35,8 @@ public class Tokeniser {
         add("Step\\{", Token.STEP); // begin step
         add("\\}", Token.ENDSTEP); // end step
         add("add", Token.ADD); // add, if oracle says yes
-        add("[+-]", Token.PLUSMINUS); // plus or minus
-        add("[*/]", Token.TIMESDIVIDE); // mult or divide
+        add("[+-*/]", Token.PLUSMINUSTIMESDIVIDE); // plus or minus
+//        add("[*/]", Token.TIMESDIVIDE); // mult or divide
         add("\\(", Token.OPENBRACKET); // open bracket
         add("\\)", Token.CLOSEBRACKET); // close bracket
         add("Z", Token.EPSILON); //End program

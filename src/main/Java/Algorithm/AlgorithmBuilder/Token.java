@@ -18,8 +18,8 @@ public class Token {
     public static final int STEP = 11;
     public static final int ENDSTEP = 13;
     public static final int ADD = 14;
-    public static final int PLUSMINUS = 15;
-    public static final int TIMESDIVIDE = 16;
+    public static final int PLUSMINUSTIMESDIVIDE = 15;
+//    public static final int TIMESDIVIDE = 16;
     public static final int OPENBRACKET = 17;
     public static final int CLOSEBRACKET = 18;
     public static final int EPSILON = -1;
