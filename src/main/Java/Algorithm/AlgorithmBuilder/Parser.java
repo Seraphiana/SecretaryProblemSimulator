@@ -15,8 +15,8 @@ public class Parser {
     private LinkedList<IfClause> ifClauses;
 
     public Parser() {
-        tokens = new LinkedList<Token>();
-        queue = new LinkedList<Token>();
+        tokens = new LinkedList<>();
+        queue = new LinkedList<>();
         ifClauses = new LinkedList<>();
     }
 
@@ -63,18 +63,8 @@ public class Parser {
     }
 
     private void evaluateCutoff() {
-
         cutoff = new CutoffClause(queue);
-        queue = new LinkedList<Token>();
-    }
-
-    private void nextToken() {
-        tokens.pop();
-        if (tokens.isEmpty()) {
-            lookahead = new Token(Token.EPSILON, "");
-        } else {
-            lookahead = tokens.getFirst();
-        }
+        queue = new LinkedList<>();
     }
 
     public LinkedList<IfClause> getIfClauses() {
