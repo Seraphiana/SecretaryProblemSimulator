@@ -30,13 +30,12 @@ public class Tokeniser {
         add("max", Token.MAX); // maximum seen element
         add("size", Token.SIZE); // matroid size
         add("=", Token.EQUALS); // equals
-        add("[0123456789]+.[0123456789]+", Token.NUM); // number
-        add("[0123456789]", Token.NUM); //number
+        add("[0123456789]+.[0123456789]+", Token.DOUBLE); // number
+        add("[0123456789]", Token.INT); //number
         add("Step\\{", Token.STEP); // begin step
         add("\\}", Token.ENDSTEP); // end step
         add("add", Token.ADD); // add, if oracle says yes
         add("[+-*/]", Token.PLUSMINUSTIMESDIVIDE); // plus or minus
-//        add("[*/]", Token.TIMESDIVIDE); // mult or divide
         add("\\(", Token.OPENBRACKET); // open bracket
         add("\\)", Token.CLOSEBRACKET); // close bracket
         add("Z", Token.EPSILON); //End program

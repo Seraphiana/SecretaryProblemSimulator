@@ -14,12 +14,12 @@ public class Token {
     public static final int MAX = 8;
     public static final int SIZE = 9;
     public static final int EQUALS = 10;
-    public static final int NUM = 12;
+    public static final int INT = 12;
     public static final int STEP = 11;
     public static final int ENDSTEP = 13;
     public static final int ADD = 14;
     public static final int PLUSMINUSTIMESDIVIDE = 15;
-//    public static final int TIMESDIVIDE = 16;
+    public static final int DOUBLE = 16;
     public static final int OPENBRACKET = 17;
     public static final int CLOSEBRACKET = 18;
     public static final int EPSILON = -1;

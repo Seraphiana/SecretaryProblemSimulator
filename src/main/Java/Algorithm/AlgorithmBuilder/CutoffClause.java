@@ -41,7 +41,7 @@ public class CutoffClause {
                     currentTotal = evaluate(currentTotal, sampleSize, currentOperation);
                 }
                 break;
-            case (Token.NUM):
+            case (Token.INT):
                 if(currentOperation==null) {
                     currentTotal = Integer.parseInt(token.sequence);
                 }
