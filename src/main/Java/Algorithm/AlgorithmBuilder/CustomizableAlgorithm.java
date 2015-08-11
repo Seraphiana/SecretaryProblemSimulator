@@ -7,19 +7,12 @@ import java.util.List;
  */
 public class CustomizableAlgorithm<T extends Comparable> implements Algorithm<T> {
     private List<IfClause> ifClauses;
-    private CutoffClause cutOff;
     private int cutOffIndex;
 
 
     private CustomizableAlgorithm(List<IfClause> ifClauses, CutoffClause cutOff, int sampleSize) {
-        this.cutOff=cutOff;
         this.ifClauses = ifClauses;
-        cutOffIndex = calculateCutOff(sampleSize);
-    }
-
-    private int calculateCutOff(int sampleSize) {
-
-        return cutOff.calculateCutOff(sampleSize);
+        cutOffIndex = cutOff.calculateCutOff(sampleSize);
     }
 
     public static Algorithm createAlgorithm(List<IfClause> ifClauses, CutoffClause cutOff, int sampleSize) {
