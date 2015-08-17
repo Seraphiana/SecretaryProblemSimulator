@@ -65,6 +65,6 @@ public class IntegerRandomiserTests {
     @Test
     public void shouldHaveTheCorrectSizeTest() {
         Randomiser<Integer> randomiser = new IntRandomiser(1);
-        assertThat(randomiser.getSize(), is(2));
+        assertThat(randomiser.getSize(), is(1));
     }
 }

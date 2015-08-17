@@ -21,17 +21,19 @@ public class Parser {
     }
 
 
-    public void parse(List<Token> tokens1) throws ParserException{
+    public void parse(List<Token> tokens1) throws ParserException {
 
         this.tokens = (LinkedList<Token>) tokens1;
         lookahead = this.tokens.getFirst();
 
         algorithm();
 
-        if (lookahead.token != Token.EPSILON) {
-            throw new ParserException("Unexpected Symbol found" + lookahead.token + tokens.peek().token, lookahead);
-        }
+        if (lookahead != null) {
 
+            if (lookahead.token != Token.EPSILON) {
+                throw new ParserException("Unexpected Symbol found" + lookahead.token + tokens.peek().token, lookahead);
+            }
+        }
     }
 
     private void algorithm() {
@@ -40,6 +42,9 @@ public class Parser {
 
             queue.add(tokens.pop());
             lookahead = tokens.peek();
+            if (lookahead == null) {
+                throw new ParserException("Algorithm does not contain any if conditions", new Token(Token.STEP, "Step{"));
+            }
         }
         evaluateCutoff();
         tokens.pop();
@@ -75,8 +80,9 @@ public class Parser {
         return cutoff;
     }
 
-    private class ParserException extends RuntimeException {
+    public class ParserException extends RuntimeException {
         private Token illegalToken;
+
         public ParserException(String message, Token illegalToken) {
             super(message);
             this.illegalToken = illegalToken;

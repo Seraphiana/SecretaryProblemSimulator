@@ -10,21 +10,28 @@ public class CutoffClause {
     private int sampleSize;
 
     public CutoffClause(Queue<Token> expression) {
-        boolean t = true;
-        while (t) {
-            t = false;
-            if (expression.peek().token==3 || expression.peek().token==10) {
-                expression.remove();
-                t = true;
+        if (expression.peek()!=null) {
+            boolean t = true;
+            while (t) {
+                t = false;
+                if (expression.peek()!=null) {
+                    if (expression.peek().token == 3 || expression.peek().token == 10) {
+                        expression.remove();
+                        t = true;
+                    }
+                }
             }
+            this.expression = expression;
         }
-        this.expression = expression;
     }
 
 
     public int calculateCutOff(int sampleSize) {
         this.sampleSize = sampleSize;
 
+        if(expression.isEmpty()) {
+            return 0;
+        }
         return calculate(0, null);
     }
 
