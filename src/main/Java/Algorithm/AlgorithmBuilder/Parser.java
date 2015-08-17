@@ -1,5 +1,7 @@
 package Java.Algorithm.AlgorithmBuilder;
 
+import Java.Constants.ProjectConstants;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -30,7 +32,7 @@ public class Parser {
 
         if (lookahead != null) {
 
-            if (lookahead.token != Token.EPSILON) {
+            if (lookahead.token != ProjectConstants.EPSILON) {
                 throw new ParserException("Unexpected Symbol found" + lookahead.token + tokens.peek().token, lookahead);
             }
         }
@@ -38,18 +40,18 @@ public class Parser {
 
     private void algorithm() {
 
-        while (lookahead.token != Token.STEP) {
+        while (lookahead.token != ProjectConstants.STEP) {
 
             queue.add(tokens.pop());
             lookahead = tokens.peek();
             if (lookahead == null) {
-                throw new ParserException("Algorithm does not contain any if conditions", new Token(Token.STEP, "Step{"));
+                throw new ParserException("Algorithm does not contain any if conditions", new Token(ProjectConstants.STEP, "Step{"));
             }
         }
         evaluateCutoff();
         tokens.pop();
-        while (lookahead.token != Token.ENDSTEP) {
-            while (lookahead.token != Token.ADD) {
+        while (lookahead.token != ProjectConstants.ENDSTEP) {
+            while (lookahead.token != ProjectConstants.ADD) {
                 queue.add(tokens.pop());
                 lookahead = tokens.peek();
             }

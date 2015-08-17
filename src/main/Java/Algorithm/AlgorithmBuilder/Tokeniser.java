@@ -1,5 +1,7 @@
 package Java.Algorithm.AlgorithmBuilder;
 
+import Java.Constants.ProjectConstants;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -20,26 +22,26 @@ public class Tokeniser {
         tokenInfos = new LinkedList<TokenInfo>();
         tokens = new LinkedList<Token>();
         fileLocation = filelocation;
-        add("x", Token.VAR); // current variable
-        add("n", Token.N); // item number
-        add("c", Token.CUTOFF); // cutoff
-        add("if", Token.IF); // if function
-        add("store", Token.STORE); // store value
-        add(">", Token.GREATER); // greater than
-        add("<", Token.LESS); // less than
-        add("max", Token.MAX); // maximum seen element
-        add("size", Token.SIZE); // matroid size
-        add("=", Token.EQUALS); // equals
-        add("[0123456789]+.[0123456789]+", Token.DOUBLE); // number
-        add("[0123456789]", Token.INT); //number
-        add("Step\\{", Token.STEP); // begin step
-        add("\\}", Token.ENDSTEP); // end step
-        add("add", Token.ADD); // add, if oracle says yes
-        add("[+-]", Token.PLUSMINUSTIMESDIVIDE); // plus or minus
-        add("[*/]", Token.PLUSMINUSTIMESDIVIDE); // Divide and multiply
-        add("\\(", Token.OPENBRACKET); // open bracket
-        add("\\)", Token.CLOSEBRACKET); // close bracket
-        add("Z", Token.EPSILON); //End program
+        add("x", ProjectConstants.VAR); // current variable
+        add("n", ProjectConstants.N); // item number
+        add("c", ProjectConstants.CUTOFF); // cutoff
+        add("if", ProjectConstants.IF); // if function
+        add("store", ProjectConstants.STORE); // store value
+        add(">", ProjectConstants.GREATER); // greater than
+        add("<", ProjectConstants.LESS); // less than
+        add("max", ProjectConstants.MAX); // maximum seen element
+        add("size", ProjectConstants.SIZE); // matroid size
+        add("=", ProjectConstants.EQUALS); // equals
+        add("[0123456789]+.[0123456789]+", ProjectConstants.DOUBLE); // number
+        add("[0123456789]", ProjectConstants.INT); //number
+        add("Step\\{", ProjectConstants.STEP); // begin step
+        add("\\}", ProjectConstants.ENDSTEP); // end step
+        add("add", ProjectConstants.ADD); // add, if oracle says yes
+        add("[+-]", ProjectConstants.PLUSMINUSTIMESDIVIDE); // plus or minus
+        add("[*/]", ProjectConstants.PLUSMINUSTIMESDIVIDE); // Divide and multiply
+        add("\\(", ProjectConstants.OPENBRACKET); // open bracket
+        add("\\)", ProjectConstants.CLOSEBRACKET); // close bracket
+        add("Z", ProjectConstants.EPSILON); //End program
 
     }
 

@@ -2,6 +2,7 @@ package Java.Algorithm;
 
 import Java.Algorithm.AlgorithmBuilder.Parser;
 import Java.Algorithm.AlgorithmBuilder.Token;
+import Java.Constants.ProjectConstants;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -24,63 +25,63 @@ public class ParserTest {
 
     @Test(expected = Parser.ParserException.class)
     public void shouldThrowAnExceptionIfGivenAnInputWithNoSteps() {
-        tokens.add(new Token(Token.CUTOFF, "c"));
+        tokens.add(new Token(ProjectConstants.CUTOFF, "c"));
 
         parser.parse(tokens);
     }
 
     @Test
     public void shouldNotThrowAParserExceptionIfGivenNoCutoff() {
-        tokens.add(new Token(Token.STEP, "Step{"));
+        tokens.add(new Token(ProjectConstants.STEP, "Step{"));
 
-        tokens.add(new Token(Token.IF, "If"));
-        tokens.add(new Token(Token.OPENBRACKET, "("));
-        tokens.add(new Token(Token.VAR, "x"));
-        tokens.add(new Token(Token.GREATER, ">"));
-        tokens.add(new Token(Token.INT, "2"));
-        tokens.add(new Token(Token.CLOSEBRACKET, ")"));
-        tokens.add(new Token(Token.ADD, "add"));
+        tokens.add(new Token(ProjectConstants.IF, "If"));
+        tokens.add(new Token(ProjectConstants.OPENBRACKET, "("));
+        tokens.add(new Token(ProjectConstants.VAR, "x"));
+        tokens.add(new Token(ProjectConstants.GREATER, ">"));
+        tokens.add(new Token(ProjectConstants.INT, "2"));
+        tokens.add(new Token(ProjectConstants.CLOSEBRACKET, ")"));
+        tokens.add(new Token(ProjectConstants.ADD, "add"));
 
-        tokens.add(new Token(Token.ENDSTEP, "}"));
+        tokens.add(new Token(ProjectConstants.ENDSTEP, "}"));
 
         parser.parse(tokens);
     }
 
     @Test
     public void shouldIgnoreExtracAtTheBeginning() {
-        tokens.add(new Token(Token.CUTOFF, "c"));
+        tokens.add(new Token(ProjectConstants.CUTOFF, "c"));
 
-        tokens.add(new Token(Token.STEP, "Step{"));
+        tokens.add(new Token(ProjectConstants.STEP, "Step{"));
 
-        tokens.add(new Token(Token.IF, "If"));
-        tokens.add(new Token(Token.OPENBRACKET, "("));
-        tokens.add(new Token(Token.VAR, "x"));
-        tokens.add(new Token(Token.GREATER, ">"));
-        tokens.add(new Token(Token.INT, "2"));
-        tokens.add(new Token(Token.CLOSEBRACKET, ")"));
-        tokens.add(new Token(Token.ADD, "add"));
+        tokens.add(new Token(ProjectConstants.IF, "If"));
+        tokens.add(new Token(ProjectConstants.OPENBRACKET, "("));
+        tokens.add(new Token(ProjectConstants.VAR, "x"));
+        tokens.add(new Token(ProjectConstants.GREATER, ">"));
+        tokens.add(new Token(ProjectConstants.INT, "2"));
+        tokens.add(new Token(ProjectConstants.CLOSEBRACKET, ")"));
+        tokens.add(new Token(ProjectConstants.ADD, "add"));
 
-        tokens.add(new Token(Token.ENDSTEP, "}"));
+        tokens.add(new Token(ProjectConstants.ENDSTEP, "}"));
 
         parser.parse(tokens);
     }
 
     @Test
     public void shouldNotThrowAnExceptionIfGivenAValidInput() {
-        tokens.add(new Token(Token.CUTOFF, "c"));
-        tokens.add(new Token(Token.EQUALS, "="));
-        tokens.add(new Token(Token.INT, "10"));
+        tokens.add(new Token(ProjectConstants.CUTOFF, "c"));
+        tokens.add(new Token(ProjectConstants.EQUALS, "="));
+        tokens.add(new Token(ProjectConstants.INT, "10"));
 
-        tokens.add(new Token(Token.STEP, "Step{"));
-        tokens.add(new Token(Token.IF, "If"));
-        tokens.add(new Token(Token.OPENBRACKET, "("));
-        tokens.add(new Token(Token.VAR, "x"));
-        tokens.add(new Token(Token.GREATER, ">"));
-        tokens.add(new Token(Token.INT, "2"));
-        tokens.add(new Token(Token.CLOSEBRACKET, ")"));
-        tokens.add(new Token(Token.ADD, "add"));
+        tokens.add(new Token(ProjectConstants.STEP, "Step{"));
+        tokens.add(new Token(ProjectConstants.IF, "If"));
+        tokens.add(new Token(ProjectConstants.OPENBRACKET, "("));
+        tokens.add(new Token(ProjectConstants.VAR, "x"));
+        tokens.add(new Token(ProjectConstants.GREATER, ">"));
+        tokens.add(new Token(ProjectConstants.INT, "2"));
+        tokens.add(new Token(ProjectConstants.CLOSEBRACKET, ")"));
+        tokens.add(new Token(ProjectConstants.ADD, "add"));
 
-        tokens.add(new Token(Token.ENDSTEP, "}"));
+        tokens.add(new Token(ProjectConstants.ENDSTEP, "}"));
 
         parser.parse(tokens);
     }

@@ -1,5 +1,7 @@
 package Java.Algorithm.AlgorithmBuilder;
 
+import Java.Constants.ProjectConstants;
+
 import java.util.Queue;
 
 /**
@@ -41,29 +43,29 @@ public class CutoffClause {
         }
         Token token = expression.remove();
         switch (token.token) {
-            case (Token.SIZE):
+            case (ProjectConstants.SIZE):
                 if(currentOperation==null) {
                     currentTotal = sampleSize;
                 } else {
                     currentTotal = evaluate(currentTotal, sampleSize, currentOperation);
                 }
                 break;
-            case (Token.INT):
+            case (ProjectConstants.INT):
                 if(currentOperation==null) {
                     currentTotal = Integer.parseInt(token.sequence);
                 }
                 else currentTotal = evaluate(currentTotal, Integer.parseInt(token.sequence), currentOperation);
                 break;
-            case (Token.PLUSMINUSTIMESDIVIDE):
+            case (ProjectConstants.PLUSMINUSTIMESDIVIDE):
                 currentOperation = token;
                 break;
-            case (Token.OPENBRACKET):
+            case (ProjectConstants.OPENBRACKET):
                 if(currentOperation==null) {
                     currentTotal = calculate(0, null);
                 }
                 else currentTotal = evaluate(currentTotal, calculate(0, null), currentOperation);
                 break;
-            case (Token.CLOSEBRACKET):
+            case (ProjectConstants.CLOSEBRACKET):
                 return currentTotal;
             default:
                 break;
