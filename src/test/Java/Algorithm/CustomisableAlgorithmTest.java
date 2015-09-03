@@ -1,9 +1,6 @@
 package Java.Algorithm;
 
-import Java.Algorithm.AlgorithmBuilder.Algorithm;
-import Java.Algorithm.AlgorithmBuilder.CustomizableAlgorithm;
-import Java.Algorithm.AlgorithmBuilder.CutoffClause;
-import Java.Algorithm.AlgorithmBuilder.IfClause;
+import Java.Algorithm.AlgorithmBuilder.*;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -25,6 +22,8 @@ public class CustomisableAlgorithmTest {
     IfClause ifClause1;
     private int sampleSize;
     LinkedList<IfClause> ifClauses;
+    private ComparableObject five;
+    private ComparableObject ten;
 
     @Before
     public void buildUp() {
@@ -33,32 +32,33 @@ public class CustomisableAlgorithmTest {
         ifClause1 = mock(IfClause.class);
         ifClauses = new LinkedList<>();
         sampleSize = 50;
+        five = ComparableObject.createNew(5d);
+        ten = ComparableObject.createNew(10d);
     }
 
     @Test
     public void shouldSayNoWhenTheElementIsBeforeTheCutOff() {
         when(cutoffClause.calculateCutOff(anyInt())).thenReturn(25);
-
         Algorithm algorithm = CustomizableAlgorithm.createAlgorithm(ifClauses, cutoffClause, sampleSize);
-        assertThat(algorithm.consider(5, 10), is(false));
+        assertThat(algorithm.consider(five, 10), is(false));
     }
 
     @Test
     public void shouldSayNoWhenTheIfStatementSaysNo() {
         when(cutoffClause.calculateCutOff(anyInt())).thenReturn(5);
         ifClauses.add(ifClause);
-        when(ifClause.consider(any())).thenReturn(false);
+        when(ifClause.consider(five, ten)).thenReturn(false);
         Algorithm algorithm = CustomizableAlgorithm.createAlgorithm(ifClauses, cutoffClause, sampleSize);
-        assertThat(algorithm.consider(5, 10), is(false));
+        assertThat(algorithm.consider(five, 10), is(false));
     }
 
     @Test
     public void shouldSayYesWhenTheIfStatementSaysYes() {
         when(cutoffClause.calculateCutOff(anyInt())).thenReturn(5);
         ifClauses.add(ifClause);
-        when(ifClause.consider(any())).thenReturn(true);
+        when(ifClause.consider(any(), any())).thenReturn(true);
         Algorithm algorithm = CustomizableAlgorithm.createAlgorithm(ifClauses, cutoffClause, sampleSize);
-        assertThat(algorithm.consider(5, 10), is(true));
+        assertThat(algorithm.consider(five, 10), is(true));
     }
 
     @Test
@@ -66,10 +66,10 @@ public class CustomisableAlgorithmTest {
         when(cutoffClause.calculateCutOff(anyInt())).thenReturn(5);
         ifClauses.add(ifClause);
         ifClauses.add(ifClause1);
-        when(ifClause.consider(any())).thenReturn(true);
-        when(ifClause1.consider(any())).thenReturn(false);
+        when(ifClause.consider(five, ten)).thenReturn(true);
+        when(ifClause1.consider(five, ten)).thenReturn(false);
         Algorithm algorithm = CustomizableAlgorithm.createAlgorithm(ifClauses, cutoffClause, sampleSize);
-        assertThat(algorithm.consider(5, 10), is(false));
+        assertThat(algorithm.consider(five, 10), is(false));
     }
 
     @Test
@@ -77,9 +77,9 @@ public class CustomisableAlgorithmTest {
         when(cutoffClause.calculateCutOff(anyInt())).thenReturn(5);
         ifClauses.add(ifClause);
         ifClauses.add(ifClause1);
-        when(ifClause.consider(any())).thenReturn(true);
-        when(ifClause1.consider(any())).thenReturn(true);
+        when(ifClause.consider(any(), any())).thenReturn(true);
+        when(ifClause1.consider(any(), any())).thenReturn(true);
         Algorithm algorithm = CustomizableAlgorithm.createAlgorithm(ifClauses, cutoffClause, sampleSize);
-        assertThat(algorithm.consider(5, 10), is(true));
+        assertThat(algorithm.consider(five, 10), is(true));
     }
 }

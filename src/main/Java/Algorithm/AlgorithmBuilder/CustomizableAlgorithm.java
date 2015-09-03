@@ -5,9 +5,10 @@ import java.util.List;
 /**
  * Created by seraphiana on 22/04/15.
  */
-public class CustomizableAlgorithm<T extends Comparable> implements Algorithm<T> {
+public class CustomizableAlgorithm<T extends ComparableObject> implements Algorithm<T> {
     private List<IfClause> ifClauses;
     private int cutOffIndex;
+    private T maxSeen;
 
 
     private CustomizableAlgorithm(List<IfClause> ifClauses, CutoffClause cutOff, int sampleSize) {
@@ -22,14 +23,19 @@ public class CustomizableAlgorithm<T extends Comparable> implements Algorithm<T>
 
     @Override
     public boolean consider(T object, int index) {
+        if (maxSeen == null) {
+            maxSeen = object;
+        } else if (object.compareTo(maxSeen)>0) {
+            maxSeen = object;
+        }
+
         if (index<cutOffIndex) {
             return false;
         }
         boolean passed = true;
         for (IfClause ifClause : ifClauses) {
-            passed = ifClause.consider(object);
+            passed = ifClause.consider(object, maxSeen);
         }
-
         return passed;
     }
 }

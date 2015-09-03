@@ -31,7 +31,6 @@ public class Parser {
         algorithm();
 
         if (lookahead != null) {
-
             if (lookahead.token != ProjectConstants.EPSILON) {
                 throw new ParserException("Unexpected Symbol found" + lookahead.token + tokens.peek().token, lookahead);
             }
@@ -63,14 +62,13 @@ public class Parser {
         lookahead = tokens.peek();
     }
 
-    private void evaluateIfClause() {
-        ifClauses.add(new IfClause(queue));
-        queue = new LinkedList<>();
-
-    }
-
     private void evaluateCutoff() {
         cutoff = new CutoffClause(queue);
+        queue = new LinkedList<>();
+    }
+
+    private void evaluateIfClause() {
+        ifClauses.add(new IfClause(queue));
         queue = new LinkedList<>();
     }
 
