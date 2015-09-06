@@ -89,11 +89,11 @@ public class Mediator {
             error[0] = "an algorithm, ";
             runFailed = true;
         }
-        if (matroidChoice == null) {
+        if (matroidChoice.length()==0) {
             error[1] = "a matroid, ";
             runFailed = true;
         }
-        if (oracleType == null) {
+        if (oracleType.length()==0) {
             error[2] = "an oracleType, ";
             runFailed = true;
         }

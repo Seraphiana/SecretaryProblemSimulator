@@ -65,7 +65,6 @@ public class GUIController implements Initializable {
         mediator = new Mediator();
         matroidChoice.setItems(FXCollections.observableArrayList(mediator.getMatroids()));
         oracleChoice.setItems(FXCollections.observableArrayList(mediator.getOracles()));
-        System.out.println(algorithmChoice.getCharacters().toString());
 
 
         stopButton.setOnAction(actionEvent -> {
