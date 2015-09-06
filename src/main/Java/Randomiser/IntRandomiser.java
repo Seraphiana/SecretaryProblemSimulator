@@ -5,16 +5,19 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import Java.Algorithm.AlgorithmBuilder.ComparableObjectBuilder;
+import Java.Algorithm.AlgorithmBuilder.NumComparableObject;
+import Java.Algorithm.AlgorithmBuilder.Token;
 import org.apache.commons.math3.random.MersenneTwister;
 
 /**
  * Created by Fliss on 15/07/14.
  */
-public class IntRandomiser implements Randomiser<Integer> {
+public class IntRandomiser implements Randomiser<NumComparableObject> {
     private final int size;
-    private List<Integer> matroid;
+    private List<NumComparableObject> matroid;
     private int index;
-    private Set<Integer> solution;
+    private Set<NumComparableObject> solution;
 
 
     public IntRandomiser(int max) {
@@ -56,18 +59,18 @@ public class IntRandomiser implements Randomiser<Integer> {
 
         matroid = new ArrayList<>();
         for (SortingElement<Integer> aMat : mat) {
-            matroid.add(aMat.getValue());
+            matroid.add(ComparableObjectBuilder.createWith(aMat.getValue()));
         }
         solution = new HashSet<>();
     }
 
     @Override
-    public Integer getItem() {
+    public NumComparableObject getItem() {
         return matroid.get(index);
     }
 
     @Override
-    public List<Integer> getMatroid() {
+    public List<NumComparableObject> getMatroid() {
         return matroid;
     }
 
@@ -80,7 +83,7 @@ public class IntRandomiser implements Randomiser<Integer> {
     }
 
     @Override
-    public Set<Integer> getSolution() {
+    public Set<NumComparableObject> getSolution() {
         return solution;
     }
 
@@ -95,9 +98,9 @@ public class IntRandomiser implements Randomiser<Integer> {
     }
 
     @Override
-    public Set<Integer> getAlreadySeen() {
-        List<Integer> alreadySeen = matroid.subList(0, index);
-        return new HashSet<Integer>(alreadySeen);
+    public List<NumComparableObject> getAlreadySeen() {
+        List<NumComparableObject> alreadySeen = matroid.subList(0, index);
+        return alreadySeen;
     }
 
     @Override
@@ -109,7 +112,7 @@ public class IntRandomiser implements Randomiser<Integer> {
     public String toString() {
         String matroidContents = "";
         int num = 1;
-        for (Integer element : matroid) {
+        for (NumComparableObject element : matroid) {
             matroidContents += element+", ";
             if (num==10) {
                 matroidContents += "\r";

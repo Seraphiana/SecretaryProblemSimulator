@@ -1,12 +1,14 @@
 package Java.Oracle;
 
+import Java.Algorithm.AlgorithmBuilder.ComparableObject;
+
 import java.util.List;
 import java.util.Set;
 
 /**
  * Created by Fliss on 04/07/14.
  */
-public interface Oracle<T> {
+public interface Oracle<T extends ComparableObject> {
 
 
     /*

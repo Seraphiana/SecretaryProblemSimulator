@@ -10,9 +10,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 
-import javax.xml.soap.Text;
-import java.awt.*;
-import java.awt.TextArea;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -55,7 +52,7 @@ public class GUIController implements Initializable {
     private ChoiceBox matroidChoice;
 
 
-    private Controller controller;
+    private Mediator mediator;
 
 
     public GUIController() {
@@ -65,24 +62,24 @@ public class GUIController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        controller = new Controller();
-        matroidChoice.setItems(FXCollections.observableArrayList(controller.getMatroids()));
-        oracleChoice.setItems(FXCollections.observableArrayList(controller.getOracles()));
+        mediator = new Mediator();
+        matroidChoice.setItems(FXCollections.observableArrayList(mediator.getMatroids()));
+        oracleChoice.setItems(FXCollections.observableArrayList(mediator.getOracles()));
         System.out.println(algorithmChoice.getCharacters().toString());
 
 
         stopButton.setOnAction(actionEvent -> {
-            controller.stop();
+            mediator.stop();
         });
 
         runButton.setOnAction(actionEvent -> {
             String[] buildData = new String[]{max.getCharacters().toString(), a.getCharacters().toString(), b.getCharacters().toString(),
                     c.getCharacters().toString(), d.getCharacters().toString(), freq.getCharacters().toString()};
-            String result = controller.run(buildData, algorithmChoice.getCharacters().toString(), (String) matroidChoice.getValue(), (String) oracleChoice.getValue());
+            String result = mediator.run(buildData, algorithmChoice.getCharacters().toString(), (String) matroidChoice.getValue(), (String) oracleChoice.getValue());
             solution.setText(result);
             if (!result.contains("You must select " )) {
-                matroidContents.setText(controller.getMatroid().toString());
-                optimalSolution.setText(controller.getOptimalSet());
+                matroidContents.setText(mediator.getMatroid().toString());
+                optimalSolution.setText(mediator.getOptimalSet());
             }
         });
 

@@ -33,7 +33,8 @@ public class Tokeniser {
         add("size", ProjectConstants.SIZE); // matroid size
         add("=", ProjectConstants.EQUALS); // equals
         add("[0123456789]+.[0123456789]+", ProjectConstants.DOUBLE); // number
-        add("[0123456789]", ProjectConstants.INT); //number
+        add("-[0123456789]+.[0123456789]+", ProjectConstants.DOUBLE); //number
+        add("[0123456789]", ProjectConstants.DOUBLE); //number
         add("Step\\{", ProjectConstants.STEP); // begin step
         add("\\}", ProjectConstants.ENDSTEP); // end step
         add("add", ProjectConstants.ADD); // add, if oracle says yes

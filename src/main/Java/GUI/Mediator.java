@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * Created by fmoon on 04/07/15.
  */
-public class Controller {
+public class Mediator {
     private RandomiserFactory randomiserFactory;
     private OracleFactoryImpl oracleFactory;
     private AlgorithmBuilder algorithmBuilder;
@@ -27,7 +27,7 @@ public class Controller {
     private Randomiser randomSet;
     private Oracle oracle;
 
-    public Controller() {
+    public Mediator() {
         randomiserFactory = new RandomiserFactoryImpl();
         oracleFactory = new OracleFactoryImpl();
         algorithmBuilder = new AlgorithmBuilder();
@@ -123,6 +123,7 @@ public class Controller {
         if (randomSet==null) {
             return "";
         }
+
         return randomSet.toString();
     }
 

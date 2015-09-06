@@ -1,12 +1,14 @@
 package Java.Randomiser;
 
+import Java.Algorithm.AlgorithmBuilder.ComparableObject;
+
 import java.util.List;
 import java.util.Set;
 
 /**
  * Created by Fliss on 04/07/14.
  */
-public interface Randomiser<T extends Comparable<T>> {
+public interface Randomiser<T extends ComparableObject> {
 
     T getItem();
 
@@ -20,7 +22,7 @@ public interface Randomiser<T extends Comparable<T>> {
 
     int getIndex();
 
-    Set<T> getAlreadySeen();
+    List<T> getAlreadySeen();
 
     int getSize();
 

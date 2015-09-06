@@ -2,7 +2,9 @@ package Java.Algorithm.AlgorithmBuilder;
 
 import Java.Constants.ProjectConstants;
 
+import java.util.LinkedList;
 import java.util.Queue;
+import java.util.concurrent.ArrayBlockingQueue;
 
 /**
  * Created by seraphiana on 21/04/15.
@@ -10,6 +12,7 @@ import java.util.Queue;
 public class IfClause {
     private Queue<Token> statement;
     private Token comparison;
+    private final Queue<Token> originalStatement;
 
 
 //    if (x > (max*0.8)) add
@@ -23,6 +26,7 @@ public class IfClause {
                 statement.remove();
             } else trim = false;
         }
+        originalStatement = statement;
         this.statement = statement;
     }
 
@@ -31,7 +35,7 @@ public class IfClause {
     }
 
     public <T extends ComparableObject> boolean consider(T object, T highestSeen) {
-        
+        statement = new LinkedList<>(originalStatement);
         comparison = statement.remove();
 
         return evaluate(object, expression(highestSeen, ComparableObject.createNew(), null));

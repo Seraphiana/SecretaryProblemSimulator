@@ -2,6 +2,7 @@ package Java.Algorithm.AlgorithmBuilder;
 
 import Java.Constants.ProjectConstants;
 
+import java.util.DoubleSummaryStatistics;
 import java.util.Queue;
 
 /**
@@ -50,11 +51,11 @@ public class CutoffClause {
                     currentTotal = evaluate(currentTotal, sampleSize, currentOperation);
                 }
                 break;
-            case (ProjectConstants.INT):
+            case (ProjectConstants.DOUBLE):
                 if(currentOperation==null) {
-                    currentTotal = Integer.parseInt(token.sequence);
+                    currentTotal = (int) Double.parseDouble(token.sequence);
                 }
-                else currentTotal = evaluate(currentTotal, Integer.parseInt(token.sequence), currentOperation);
+                else currentTotal = evaluate(currentTotal, Double.parseDouble(token.sequence), currentOperation);
                 break;
             case (ProjectConstants.PLUSMINUSTIMESDIVIDE):
                 currentOperation = token;
@@ -74,19 +75,19 @@ public class CutoffClause {
     }
 
 
-    private int evaluate(int currentTotal, int i, Token operation) {
+    private int evaluate(int currentTotal, double i, Token operation) {
         switch (operation.sequence) {
             case ("+"):
-                currentTotal= currentTotal+i;
+                currentTotal= (int) (currentTotal+i);
                 break;
             case ("-"):
-                currentTotal=currentTotal-i;
+                currentTotal= (int) (currentTotal-i);
                 break;
             case ("*"):
-                currentTotal=currentTotal*i;
+                currentTotal= (int) (currentTotal*i);
                 break;
             case ("/"):
-                currentTotal=currentTotal/i;
+                currentTotal= (int) (currentTotal/i);
                 break;
 
             default: break;

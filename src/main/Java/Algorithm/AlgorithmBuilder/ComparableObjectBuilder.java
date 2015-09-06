@@ -22,4 +22,7 @@ public class ComparableObjectBuilder {
         return new NumComparableObject(0d);
     }
 
+    public static NumComparableObject createWith(double value) {
+        return new NumComparableObject(value);
+    }
 }

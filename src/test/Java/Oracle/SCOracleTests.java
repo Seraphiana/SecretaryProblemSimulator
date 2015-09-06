@@ -1,5 +1,7 @@
 package Java.Oracle;
 
+import Java.Algorithm.AlgorithmBuilder.ComparableObjectBuilder;
+import Java.Algorithm.AlgorithmBuilder.NumComparableObject;
 import org.junit.Test;
 
 import java.util.HashSet;
@@ -14,7 +16,7 @@ public class SCOracleTests {
 
     @Test
     public void ShouldAnswerYesTest() {
-        Integer x = 5;
+        NumComparableObject x = ComparableObjectBuilder.createWith(5);
 
         SingleCandidateOracle oracle =  SingleCandidateOracle.createSingleCandidateOracle();
 
@@ -23,8 +25,8 @@ public class SCOracleTests {
 
     @Test
     public void shouldAnswerNoTest() {
-        Integer x = 3;
-        Integer y = 9;
+        NumComparableObject x = ComparableObjectBuilder.createWith(3);
+        NumComparableObject y = ComparableObjectBuilder.createWith(9);
         Oracle oracle = SingleCandidateOracle.createSingleCandidateOracle();
 
         oracle.consider(y);

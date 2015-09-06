@@ -1,13 +1,13 @@
 package Java.Algorithm.AlgorithmBuilder;
 
-import java.math.BigDecimal;
-
 /**
  * Created by fmoon on 21/08/15.
  */
 public class NumComparableObject extends ComparableObject {
 
     public <T extends Comparable> NumComparableObject(T i) {
+
+
         comparable = i;
     }
 

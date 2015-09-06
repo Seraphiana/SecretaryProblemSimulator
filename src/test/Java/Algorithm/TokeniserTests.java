@@ -33,7 +33,7 @@ public class TokeniserTests {
                 "10 =\n" +
                 "9 size\n" +
                 "15 /\n" +
-                "12 2\n" +
+                "16 2\n" +
                 "11 Step{\n" +
                 "4 if\n" +
                 "17 (\n" +

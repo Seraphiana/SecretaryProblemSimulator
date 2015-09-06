@@ -27,7 +27,7 @@ public class CutOffClauseTest {
     public void shouldEvaluateAnExpressionThatIsASingleNumberTokenToBeEqualToThatNumber() {
         int amount = 500;
         tokens = new ConcurrentLinkedQueue<>();
-        tokens.add(new Token(ProjectConstants.INT, "" + amount));
+        tokens.add(new Token(ProjectConstants.DOUBLE, "" + amount));
         CutoffClause cutoffClause = new CutoffClause(tokens);
         assertThat(cutoffClause.calculateCutOff(10), is(amount));
     }
@@ -37,7 +37,21 @@ public class CutOffClauseTest {
         Queue<Token> tokens = new ConcurrentLinkedQueue<>();
         tokens.add(new Token(ProjectConstants.DOUBLE, "" + amount));
         CutoffClause cutoffClause = new CutoffClause(tokens);
-        assertThat(cutoffClause.calculateCutOff(10), is(0));
+        assertThat(cutoffClause.calculateCutOff(10), is(500));
+    }
+
+//    c = size / 2
+    @Test
+    public void shouldReturnTheCorrectCutoffValue() {
+        Queue<Token> tokens = new ConcurrentLinkedQueue<>();
+        tokens.add(new Token(ProjectConstants.CUTOFF, "c"));
+        tokens.add(new Token(ProjectConstants.EQUALS, "="));
+        tokens.add(new Token(ProjectConstants.SIZE, "size"));
+        tokens.add(new Token(ProjectConstants.PLUSMINUSTIMESDIVIDE, "/"));
+        tokens.add(new Token(ProjectConstants.DOUBLE, "2"));
+        CutoffClause cutoffClause = new CutoffClause(tokens);
+        int candidateSetSize = 10;
+        assertThat(cutoffClause.calculateCutOff(candidateSetSize), is(5));
     }
 
     @Test
@@ -45,9 +59,9 @@ public class CutOffClauseTest {
         int a = 2;
         int b = 3;
         tokens = new ConcurrentLinkedQueue<>();
-        tokens.add(new Token(ProjectConstants.INT, "" + a));
+        tokens.add(new Token(ProjectConstants.DOUBLE, "" + a));
         tokens.add(new Token(ProjectConstants.PLUSMINUSTIMESDIVIDE, "*"));
-        tokens.add(new Token(ProjectConstants.INT, "" + b));
+        tokens.add(new Token(ProjectConstants.DOUBLE, "" + b));
         CutoffClause cutoffClause = new CutoffClause(tokens);
         assertThat(cutoffClause.calculateCutOff(5), is(a*b));
     }
@@ -57,9 +71,9 @@ public class CutOffClauseTest {
         int a = 2;
         int b = 3;
         tokens = new ConcurrentLinkedQueue<>();
-        tokens.add(new Token(ProjectConstants.INT, "" + a));
+        tokens.add(new Token(ProjectConstants.DOUBLE, "" + a));
         tokens.add(new Token(ProjectConstants.PLUSMINUSTIMESDIVIDE, "+"));
-        tokens.add(new Token(ProjectConstants.INT, "" + b));
+        tokens.add(new Token(ProjectConstants.DOUBLE, "" + b));
         CutoffClause cutoffClause = new CutoffClause(tokens);
         assertThat(cutoffClause.calculateCutOff(5), is(a+b));
     }
@@ -69,9 +83,9 @@ public class CutOffClauseTest {
         int a = 6;
         int b = 3;
         tokens = new ConcurrentLinkedQueue<>();
-        tokens.add(new Token(ProjectConstants.INT, "" + a));
+        tokens.add(new Token(ProjectConstants.DOUBLE, "" + a));
         tokens.add(new Token(ProjectConstants.PLUSMINUSTIMESDIVIDE, "/"));
-        tokens.add(new Token(ProjectConstants.INT, "" + b));
+        tokens.add(new Token(ProjectConstants.DOUBLE, "" + b));
         CutoffClause cutoffClause = new CutoffClause(tokens);
         assertThat(cutoffClause.calculateCutOff(5), is(a/b));
     }
@@ -81,9 +95,9 @@ public class CutOffClauseTest {
         int a = 4;
         int b = 3;
         tokens = new ConcurrentLinkedQueue<>();
-        tokens.add(new Token(ProjectConstants.INT, "" + a));
+        tokens.add(new Token(ProjectConstants.DOUBLE, "" + a));
         tokens.add(new Token(ProjectConstants.PLUSMINUSTIMESDIVIDE, "-"));
-        tokens.add(new Token(ProjectConstants.INT, "" + b));
+        tokens.add(new Token(ProjectConstants.DOUBLE, "" + b));
         CutoffClause cutoffClause = new CutoffClause(tokens);
         assertThat(cutoffClause.calculateCutOff(5), is(a-b));
     }
@@ -94,12 +108,12 @@ public class CutOffClauseTest {
         int b = 3;
         int c = 4;
         tokens = new ConcurrentLinkedQueue<>();
-        tokens.add(new Token(ProjectConstants.INT, "" + a));
+        tokens.add(new Token(ProjectConstants.DOUBLE, "" + a));
         tokens.add(new Token(ProjectConstants.PLUSMINUSTIMESDIVIDE, "*"));
         tokens.add(new Token(ProjectConstants.OPENBRACKET, "("));
-        tokens.add(new Token(ProjectConstants.INT, "" + b));
+        tokens.add(new Token(ProjectConstants.DOUBLE, "" + b));
         tokens.add(new Token(ProjectConstants.PLUSMINUSTIMESDIVIDE, "+"));
-        tokens.add(new Token(ProjectConstants.INT, "" + c));
+        tokens.add(new Token(ProjectConstants.DOUBLE, "" + c));
         tokens.add(new Token(ProjectConstants.CLOSEBRACKET, ")"));
         CutoffClause cutoffClause = new CutoffClause(tokens);
         assertThat(cutoffClause.calculateCutOff(5), is(a*(b+c)));
@@ -112,7 +126,7 @@ public class CutOffClauseTest {
         tokens = new ConcurrentLinkedQueue<>();
         tokens.add(new Token(ProjectConstants.SIZE, "size"));
         tokens.add(new Token(ProjectConstants.PLUSMINUSTIMESDIVIDE, "*"));
-        tokens.add(new Token(ProjectConstants.INT, "" + x));
+        tokens.add(new Token(ProjectConstants.DOUBLE, "" + x));
         CutoffClause cutoffClause = new CutoffClause(tokens);
         assertThat(cutoffClause.calculateCutOff(sampleSize), is(sampleSize*x));
     }

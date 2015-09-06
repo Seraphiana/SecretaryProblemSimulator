@@ -11,6 +11,23 @@ public abstract class ComparableObject <T extends Comparable, S extends Comparab
         return comparable.compareTo(o.comparable);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (o.getClass()!=this.getClass()) {
+            return false;
+        }
+        ComparableObject comp = (ComparableObject) o;
+        if (comparable.equals(comp.comparable)) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        return comparable.toString();
+    }
+
     public static ComparableObject createNew() {
         return ComparableObjectBuilder.createStub();
     }

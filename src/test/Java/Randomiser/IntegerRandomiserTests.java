@@ -1,5 +1,7 @@
 package Java.Randomiser;
 
+import Java.Algorithm.AlgorithmBuilder.ComparableObjectBuilder;
+import Java.Algorithm.AlgorithmBuilder.NumComparableObject;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -21,50 +23,50 @@ public class IntegerRandomiserTests {
     public void shouldGiveAListOfCandidatesTest() {
 
         Randomiser randomiser = new IntRandomiser(1, 4);
-        List<Integer> expected = new ArrayList<>();
-        expected.add(1);
-        expected.add(1);
-        expected.add(1);
-        expected.add(1);
+        List<NumComparableObject> expected = new ArrayList<>();
+        expected.add(ComparableObjectBuilder.createWith(1));
+        expected.add(ComparableObjectBuilder.createWith(1));
+        expected.add(ComparableObjectBuilder.createWith(1));
+        expected.add(ComparableObjectBuilder.createWith(1));
         assertEquals(expected, randomiser.getMatroid());
     }
 
     @Test
     public void shouldAlsoGiveAListOfCandidatesTest() {
         Randomiser randomiser = new IntRandomiser(1);
-        List<Integer> list = new ArrayList<>();
-        list.add(1);
+        List<NumComparableObject> list = new ArrayList<>();
+        list.add(ComparableObjectBuilder.createWith(1));
         assertEquals(list, randomiser.getMatroid());
     }
 
     @Test
     public void shouldGiveTwoSeparateValues() {
-        Randomiser<Integer> randomiser = new IntRandomiser(2);
-        int x = randomiser.getItem();
+        Randomiser<NumComparableObject> randomiser = new IntRandomiser(2);
+        NumComparableObject x = randomiser.getItem();
         randomiser.itemDecision(false);
-        int y = randomiser.getItem();
+        NumComparableObject y = randomiser.getItem();
         assertNotSame(x, y);
     }
 
     @Test
     public void shouldGiveSameCandidate() {
-        Randomiser<Integer> randomiser = new IntRandomiser(2);
-        int x = randomiser.getItem();
-        int y = randomiser.getItem();
+        Randomiser<NumComparableObject> randomiser = new IntRandomiser(2);
+        NumComparableObject x = randomiser.getItem();
+        NumComparableObject y = randomiser.getItem();
         assertEquals(x, y);
     }
 
 
     @Test
     public void shouldGiveASolutionSet() {
-        Randomiser<Integer> randomiser = new IntRandomiser(3);
+        Randomiser<NumComparableObject> randomiser = new IntRandomiser(3);
         randomiser.itemDecision(true);
         assertNotSame(new HashSet<Integer>(), randomiser.getSolution());
     }
 
     @Test
     public void shouldHaveTheCorrectSizeTest() {
-        Randomiser<Integer> randomiser = new IntRandomiser(1);
+        Randomiser<NumComparableObject> randomiser = new IntRandomiser(1);
         assertThat(randomiser.getSize(), is(1));
     }
 }
