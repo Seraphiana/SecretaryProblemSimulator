@@ -65,16 +65,14 @@ public class Mediator {
 
     public ObservableList<String> getOracles() {
         List<String> oracles = new ArrayList<>();
-        oracles.add("Select Solution Restriction");
-        oracles.add("Single Candidate");
+        oracles.add(ProjectConstants.SINGLECANDIDATE);
         return FXCollections.observableArrayList(oracles);
     }
 
     public ObservableList<String> getMatroids() {
         List<String> matroidChoices = new ArrayList<>();
 
-        matroidChoices.add("Select Matroid Type");
-        matroidChoices.add("Integer");
+        matroidChoices.add(ProjectConstants.INTEGER);
 
         return FXCollections.observableArrayList(matroidChoices);
     }
