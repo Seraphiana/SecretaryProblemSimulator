@@ -1,5 +1,7 @@
 package Java.Algorithm.AlgorithmBuilder;
 
+import Java.Randomiser.ComparableObject;
+
 import java.util.List;
 
 public class CustomizableAlgorithm<T extends ComparableObject> implements Algorithm<T> {

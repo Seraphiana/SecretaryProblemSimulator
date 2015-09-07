@@ -1,4 +1,6 @@
-package Java.Algorithm.AlgorithmBuilder;
+package Java.Randomiser;
+
+import Java.Algorithm.AlgorithmBuilder.Token;
 
 public class NumComparableObject extends ComparableObject {
 

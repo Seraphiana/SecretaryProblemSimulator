@@ -1,7 +1,5 @@
 package Java.Randomiser;
 
-import Java.Algorithm.AlgorithmBuilder.ComparableObject;
-
 import java.util.List;
 import java.util.Set;
 

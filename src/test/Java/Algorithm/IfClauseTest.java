@@ -1,7 +1,7 @@
 package Java.Algorithm;
 
 import Java.Algorithm.AlgorithmBuilder.IfClause;
-import Java.Algorithm.AlgorithmBuilder.NumComparableObject;
+import Java.Randomiser.NumComparableObject;
 import Java.Algorithm.AlgorithmBuilder.Token;
 import Java.Constants.ProjectConstants;
 import org.junit.Before;

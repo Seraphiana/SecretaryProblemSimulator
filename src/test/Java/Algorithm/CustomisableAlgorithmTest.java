@@ -1,6 +1,7 @@
 package Java.Algorithm;
 
 import Java.Algorithm.AlgorithmBuilder.*;
+import Java.Randomiser.ComparableObject;
 import org.junit.Before;
 import org.junit.Test;
 

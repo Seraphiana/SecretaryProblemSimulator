@@ -1,7 +1,5 @@
 package Java.Randomiser;
 
-import Java.Algorithm.AlgorithmBuilder.ComparableObjectBuilder;
-import Java.Algorithm.AlgorithmBuilder.NumComparableObject;
 import org.junit.Test;
 
 import java.util.ArrayList;

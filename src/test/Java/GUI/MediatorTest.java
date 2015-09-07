@@ -10,7 +10,8 @@ import static org.junit.Assert.*;
 public class MediatorTest {
 
     private Mediator mediator;
-    private String[] buildData = {"" + 10,"" + 1,"" + -1,"" +  1,"" + -1,"" + 1};;
+    private String[] buildData = {"" + 10, "" + 1, "" + -1, "" + 1, "" + -1, "" + 1};
+    ;
 
     @Before
     public void buildup() {
@@ -24,12 +25,12 @@ public class MediatorTest {
         String matroidChoice = ProjectConstants.INTEGER;
         String oracleType = ProjectConstants.SINGLECANDIDATE;
         String result = mediator.run(buildData, algChoice, matroidChoice, oracleType);
-        assertTrue(Double.parseDouble(result.substring(1, result.length()-1))>200);
+        assertTrue(Double.parseDouble(result.substring(1, result.length() - 1)) > 100);
     }
 
     @Test
-        public void shouldGiveErrorMessages() {
-    String result = mediator.run(buildData, "", "", "");
+    public void shouldGiveErrorMessages() {
+        String result = mediator.run(buildData, "", "", "");
         String expected = "You must select\r" + "an algorithm, " + "\r" + "a matroid, " + "\r" + "an oracleType, " + "\r" + "to run.";
         assertThat(result, is(expected));
     }

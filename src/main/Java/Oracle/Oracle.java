@@ -1,9 +1,8 @@
 package Java.Oracle;
 
-import Java.Algorithm.AlgorithmBuilder.ComparableObject;
+import Java.Randomiser.ComparableObject;
 
 import java.util.List;
-import java.util.Set;
 
 public interface Oracle<T extends ComparableObject> {
 

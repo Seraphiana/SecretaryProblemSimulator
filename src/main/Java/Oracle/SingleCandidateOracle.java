@@ -1,7 +1,7 @@
 package Java.Oracle;
 
 
-import Java.Algorithm.AlgorithmBuilder.ComparableObject;
+import Java.Randomiser.ComparableObject;
 
 import java.util.ArrayList;
 import java.util.List;

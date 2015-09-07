@@ -1,11 +1,8 @@
 package Java.Oracle;
 
-import Java.Algorithm.AlgorithmBuilder.ComparableObjectBuilder;
-import Java.Algorithm.AlgorithmBuilder.NumComparableObject;
+import Java.Randomiser.ComparableObjectBuilder;
+import Java.Randomiser.NumComparableObject;
 import org.junit.Test;
-
-import java.util.HashSet;
-import java.util.Set;
 
 import static junit.framework.Assert.assertEquals;
 

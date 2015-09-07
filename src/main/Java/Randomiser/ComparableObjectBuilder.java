@@ -1,5 +1,6 @@
-package Java.Algorithm.AlgorithmBuilder;
+package Java.Randomiser;
 
+import Java.Algorithm.AlgorithmBuilder.Token;
 import Java.Constants.ProjectConstants;
 
 public class ComparableObjectBuilder {

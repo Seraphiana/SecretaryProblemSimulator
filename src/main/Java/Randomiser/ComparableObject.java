@@ -1,4 +1,6 @@
-package Java.Algorithm.AlgorithmBuilder;
+package Java.Randomiser;
+
+import Java.Algorithm.AlgorithmBuilder.Token;
 
 public abstract class ComparableObject <T extends Comparable, S extends ComparableObject> implements Comparable<ComparableObject> {
     protected T comparable;
