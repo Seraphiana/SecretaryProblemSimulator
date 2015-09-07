@@ -2,9 +2,6 @@ package Java.Randomiser;
 
 import Java.Constants.ProjectConstants;
 
-/**
- * Created by Fliss on 14/07/14.
- */
 public class RandomiserFactoryImpl implements RandomiserFactory {
     private String randomiserType;
     private double[] buildInfo;

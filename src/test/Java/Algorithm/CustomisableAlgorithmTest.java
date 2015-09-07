@@ -13,9 +13,6 @@ import static org.mockito.Matchers.anyInt;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-/**
- * Created by fmoon on 11/08/15.
- */
 public class CustomisableAlgorithmTest {
     CutoffClause cutoffClause;
     IfClause ifClause;

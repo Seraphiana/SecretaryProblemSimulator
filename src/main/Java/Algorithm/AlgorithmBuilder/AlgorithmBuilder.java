@@ -2,9 +2,6 @@ package Java.Algorithm.AlgorithmBuilder;
 
 import java.io.File;
 
-/**
- * Created by seraphiana on 02/10/14.
- */
 public class AlgorithmBuilder {
     private int matroidSize;
 

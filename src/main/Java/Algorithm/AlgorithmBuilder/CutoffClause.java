@@ -5,9 +5,6 @@ import Java.Constants.ProjectConstants;
 import java.util.DoubleSummaryStatistics;
 import java.util.Queue;
 
-/**
- * Created by seraphiana on 21/04/15.
- */
 public class CutoffClause {
     private Queue<Token> expression;
     private int sampleSize;

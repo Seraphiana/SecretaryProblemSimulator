@@ -12,9 +12,6 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
-/**
- * Created by fmoon on 11/08/15.
- */
 public class CutOffClauseTest {
     Queue<Token> tokens = new ConcurrentLinkedQueue<>();
 

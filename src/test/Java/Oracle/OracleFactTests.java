@@ -6,9 +6,6 @@ import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
 
-/**
- * Created by fmoon on 07/08/15.
- */
 public class OracleFactTests {
     OracleFactoryImpl oracleFactory;
 

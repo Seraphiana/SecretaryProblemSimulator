@@ -7,9 +7,6 @@ import org.junit.Test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
-/**
- * Created by fmoon on 06/09/15.
- */
 public class MediatorTest {
 
     private Mediator mediator;

@@ -7,13 +7,8 @@ import Java.Randomiser.RandomiserFactory;
 import Java.Randomiser.RandomiserFactoryImpl;
 import org.junit.Test;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
-/**
- * Created by Fliss on 15/07/14.
- */
 public class FactoryTests {
 
     @Test

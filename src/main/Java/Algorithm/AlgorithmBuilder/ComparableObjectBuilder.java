@@ -2,9 +2,6 @@ package Java.Algorithm.AlgorithmBuilder;
 
 import Java.Constants.ProjectConstants;
 
-/**
- * Created by fmoon on 01/09/15.
- */
 public class ComparableObjectBuilder {
 
     public static ComparableObject createWith(Token value) {

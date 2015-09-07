@@ -1,8 +1,5 @@
 package Java.Algorithm.AlgorithmBuilder;
 
-/**
- * Created by seraphiana on 15/04/15.
- */
 public class Token {
 
     public final int token;

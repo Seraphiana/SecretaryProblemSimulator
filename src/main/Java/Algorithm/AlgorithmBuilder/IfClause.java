@@ -4,11 +4,7 @@ import Java.Constants.ProjectConstants;
 
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.concurrent.ArrayBlockingQueue;
 
-/**
- * Created by seraphiana on 21/04/15.
- */
 public class IfClause {
     private Queue<Token> statement;
     private Token comparison;

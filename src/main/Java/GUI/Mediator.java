@@ -14,9 +14,6 @@ import javafx.collections.ObservableList;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by fmoon on 04/07/15.
- */
 public class Mediator {
     private RandomiserFactory randomiserFactory;
     private OracleFactoryImpl oracleFactory;

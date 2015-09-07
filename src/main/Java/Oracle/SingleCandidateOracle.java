@@ -6,9 +6,6 @@ import Java.Algorithm.AlgorithmBuilder.ComparableObject;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Fliss on 04/07/14.
- */
 public class SingleCandidateOracle<T extends ComparableObject> implements Oracle<T> {
     private ArrayList<T> solution;
     private T maximum;

@@ -13,9 +13,6 @@ import java.net.URL;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
-/**
- * Created by seraphiana on 02/12/14.
- */
 public class TokeniserTests {
 
 

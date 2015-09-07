@@ -6,9 +6,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-/**
- * Created by seraphiana on 15/04/15.
- */
 public class Parser {
     private LinkedList<Token> tokens;
     private Token lookahead;

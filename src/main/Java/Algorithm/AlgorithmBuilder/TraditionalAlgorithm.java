@@ -1,8 +1,5 @@
 package Java.Algorithm.AlgorithmBuilder;
 
-/**
- * Created by fmoon on 19/07/15.
- */
 public class TraditionalAlgorithm implements Algorithm {
     int cutOff;
     Comparable maximum;

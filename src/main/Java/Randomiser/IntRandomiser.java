@@ -10,9 +10,6 @@ import Java.Algorithm.AlgorithmBuilder.NumComparableObject;
 import Java.Algorithm.AlgorithmBuilder.Token;
 import org.apache.commons.math3.random.MersenneTwister;
 
-/**
- * Created by Fliss on 15/07/14.
- */
 public class IntRandomiser implements Randomiser<NumComparableObject> {
     private final int size;
     private List<NumComparableObject> matroid;

@@ -9,9 +9,6 @@ import java.util.LinkedList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * Created by seraphiana on 02/12/14.
- */
 public class Tokeniser {
     private LinkedList<TokenInfo> tokenInfos;
     private LinkedList<Token> tokens;

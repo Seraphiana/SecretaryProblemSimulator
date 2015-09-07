@@ -9,9 +9,6 @@ import org.junit.Test;
 import java.util.LinkedList;
 import java.util.List;
 
-/**
- * Created by fmoon on 11/08/15.
- */
 public class ParserTest {
 
     private Parser parser;

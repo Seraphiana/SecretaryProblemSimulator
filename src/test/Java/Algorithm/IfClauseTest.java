@@ -13,9 +13,6 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
-/**
- * Created by fmoon on 18/08/15.
- */
 public class IfClauseTest {
     Queue<Token> tokens;
     IfClause ifClause;

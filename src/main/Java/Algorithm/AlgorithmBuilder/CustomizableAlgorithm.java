@@ -2,9 +2,6 @@ package Java.Algorithm.AlgorithmBuilder;
 
 import java.util.List;
 
-/**
- * Created by seraphiana on 22/04/15.
- */
 public class CustomizableAlgorithm<T extends ComparableObject> implements Algorithm<T> {
     private List<IfClause> ifClauses;
     private int cutOffIndex;

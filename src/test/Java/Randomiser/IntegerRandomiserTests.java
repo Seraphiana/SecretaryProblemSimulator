@@ -14,9 +14,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotSame;
 
 
-/**
- * Created by Fliss on 15/07/14.
- */
 public class IntegerRandomiserTests {
 
     @Test

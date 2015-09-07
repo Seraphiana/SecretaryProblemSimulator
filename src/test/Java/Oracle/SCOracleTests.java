@@ -9,9 +9,6 @@ import java.util.Set;
 
 import static junit.framework.Assert.assertEquals;
 
-/**
- * Created by Fliss on 16/07/14.
- */
 public class SCOracleTests {
 
     @Test

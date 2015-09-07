@@ -1,8 +1,5 @@
 package Java.Algorithm.AlgorithmBuilder;
 
-/**
- * Created by fmoon on 19/08/15.
- */
 public abstract class ComparableObject <T extends Comparable, S extends ComparableObject> implements Comparable<ComparableObject> {
     protected T comparable;
 

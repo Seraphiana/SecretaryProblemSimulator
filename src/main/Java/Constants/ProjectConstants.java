@@ -1,8 +1,5 @@
 package Java.Constants;
 
-/**
- * Created by seraphiana on 02/10/14.
- */
 public class ProjectConstants {
 
 

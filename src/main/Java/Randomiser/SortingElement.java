@@ -1,8 +1,5 @@
 package Java.Randomiser;
 
-/**
- * Created by seraphiana on 17/07/14.
- */
 public class SortingElement<T> {
     private T value;
     private int index;

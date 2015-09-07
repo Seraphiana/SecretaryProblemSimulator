@@ -2,9 +2,6 @@ package Java.Randomiser;
 
 import java.util.Comparator;
 
-/**
- * Created by seraphiana on 17/07/14.
- */
 public class Comparer implements Comparator<SortingElement> {
     @Override
     public int compare(SortingElement o1, SortingElement o2) {
