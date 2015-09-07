@@ -81,21 +81,39 @@ public class Mediator {
         String[] error = new String[] {"", "", ""};
         boolean runFailed = false;
         if (algChoice.length()==0) {
-            error[0] = "an algorithm, ";
+            error[0] = "an algorithm,\r";
             runFailed = true;
         }
-        if (matroidChoice.length()==0) {
-            error[1] = "a matroid, ";
-            runFailed = true;
+        if (matroidChoice==null) {
+            runFailed = matroidIsRunFailed(error);
         }
-        if (oracleType.length()==0) {
-            error[2] = "an oracleType, ";
-            runFailed = true;
+        else if (matroidChoice.length()==0) {
+            runFailed = matroidIsRunFailed(error);
+        }
+        if (oracleType==null) {
+            runFailed = oracleIsRunFailed(error);
+        }
+        else if (oracleType.length()==0) {
+            runFailed = oracleIsRunFailed(error);
         }
         if (runFailed) {
-            return ("You must select\r" + error[0] + "\r" + error[1] + "\r" + error[2] + "\r" + "to run.");
+            return ("You must select\r" + error[0]  + error[1]  + error[2] +  "to run.");
         }
         return null;
+    }
+
+    private boolean matroidIsRunFailed(String[] error) {
+        boolean runFailed;
+        error[1] = "a matroid, \r";
+        runFailed = true;
+        return runFailed;
+    }
+
+    private boolean oracleIsRunFailed(String[] error) {
+        boolean runFailed;
+        error[2] = "an oracleType,\r";
+        runFailed = true;
+        return runFailed;
     }
 
     private void updateAll(String[] buildData, String algChoice, String matroidChoice, String oracleType) {

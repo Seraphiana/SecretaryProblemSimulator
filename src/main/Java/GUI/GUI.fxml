@@ -22,38 +22,47 @@
             <children>
                 <Button fx:id="runButton" alignment="TOP_CENTER" contentDisplay="TOP" mnemonicParsing="false"
                         text="Run"/>
-                <TextField text="0" fx:id="a" GridPane.rowIndex="1"/>
-                <TextField text="0" fx:id="b" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-                <TextField text="1" fx:id="c" GridPane.rowIndex="2"/>
-                <TextField text="0" fx:id="d" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-                <TextField text="10" fx:id="max" GridPane.rowIndex="3"/>
-                <TextField text="1" fx:id="freq" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+                <TextField text="0" fx:id="a" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                <Text text="a" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField text="0" fx:id="b" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                <Text text="b" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField text="1" fx:id="c" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+                <Text text="c" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField text="0" fx:id="d" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                <Text text="d" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <TextField text="10" fx:id="max" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+                <Text text="Maximum" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                <TextField text="1" fx:id="freq" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+                <Text text="Frequency" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
                 <Button fx:id="stopButton" mnemonicParsing="false" text="Stop" GridPane.columnIndex="1"/>
             </children>
         </GridPane>
-        <GridPane fx:id="bottomeGrid" layoutY="140" layoutX="10">
+        <GridPane fx:id="bottomeGrid" layoutY="250" layoutX="10" >
             <children>
-                <TextField text="test" fx:id="algorithmChoice" prefWidth="150.0" GridPane.rowIndex="3"/>
-                <ChoiceBox fx:id="matroidChoice" prefWidth="150.0" GridPane.rowIndex="2"/>
-                <ChoiceBox fx:id="oracleChoice" prefWidth="150" GridPane.rowIndex="1"/>
+                <TextField text="Traditional" fx:id="algorithmChoice" prefWidth="150.0" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+                <Text text="Algorithm Choice" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <ChoiceBox fx:id="matroidChoice" prefWidth="150.0" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                <Text text="Candidate Type" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <ChoiceBox fx:id="oracleChoice" prefWidth="150" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                <Text text="Oracle Type" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
             </children>
         </GridPane>
 
-        <GridPane fx:id="solutionGrid" alignment="TOP_CENTER" layoutX="10" layoutY="240" prefHeight="100.0"
-                  prefWidth="200.0">
+        <GridPane fx:id="solutionGrid" alignment="TOP_CENTER" layoutX="220" layoutY="10" prefHeight="100.0"
+                  prefWidth="200.0" >
             <children>
                 <Text text="Solution" GridPane.rowIndex="0"/>
                 <Text text="" fx:id="solution" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
             </children>
         </GridPane>
-        <GridPane fx:id="matroidGrid" alignment="TOP_CENTER" layoutX="420" layoutY="10" prefWidth="250" prefHeight="500">
+        <GridPane fx:id="matroidGrid" alignment="TOP_CENTER" layoutX="440" layoutY="10" prefWidth="250" prefHeight="500">
             <children>
                 <Text text="Matroid contents" GridPane.rowIndex="0"/>
                 <Text text="" fx:id="matroidContents" GridPane.rowIndex="1"/>
             </children>
 
         </GridPane>
-        <GridPane fx:id="optimalSolutionGrid" alignment="TOP_CENTER" layoutX="200" layoutY="10" prefWidth="250" prefHeight="500">
+        <GridPane fx:id="optimalSolutionGrid" alignment="TOP_CENTER" layoutX="220" layoutY="250" prefWidth="250" prefHeight="500">
             <children>
                 <Text text="Optimal solution" GridPane.rowIndex="0"/>
                 <Text text="" fx:id="optimalSolution" GridPane.rowIndex="1"/>

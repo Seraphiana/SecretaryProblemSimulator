@@ -28,7 +28,7 @@ public class ProjectConstants {
     public static final String SINGLECANDIDATE = "Single Candidate";
 
     //Randomiser Types
-    public static final String INTEGER = "Integer";
+    public static final String INTEGER = "Scalar";
 
     //Algorithm Types
     public static final String TRADITIONAL = "Traditional";

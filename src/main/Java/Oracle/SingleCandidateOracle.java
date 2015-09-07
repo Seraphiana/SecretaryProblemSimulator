@@ -31,7 +31,8 @@ public class SingleCandidateOracle<T extends ComparableObject> implements Oracle
 
     @Override
     public String solution() {
-        return solution.toString();
+        String result = solution.toString();
+        return result.substring(1, result.length()-1);
     }
 
     @Override

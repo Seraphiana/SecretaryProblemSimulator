@@ -25,13 +25,13 @@ public class MediatorTest {
         String matroidChoice = ProjectConstants.INTEGER;
         String oracleType = ProjectConstants.SINGLECANDIDATE;
         String result = mediator.run(buildData, algChoice, matroidChoice, oracleType);
-        assertTrue(Double.parseDouble(result.substring(1, result.length() - 1)) > 100);
+        assertTrue(Double.parseDouble(result) > 100);
     }
 
     @Test
     public void shouldGiveErrorMessages() {
         String result = mediator.run(buildData, "", "", "");
-        String expected = "You must select\r" + "an algorithm, " + "\r" + "a matroid, " + "\r" + "an oracleType, " + "\r" + "to run.";
+        String expected = "You must select\r" + "an algorithm," + "\r" + "a matroid, " + "\r" + "an oracleType," + "\r" + "to run.";
         assertThat(result, is(expected));
     }
 }
