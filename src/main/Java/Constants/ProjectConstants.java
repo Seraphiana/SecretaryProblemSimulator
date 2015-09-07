@@ -32,4 +32,5 @@ public class ProjectConstants {
     public static final int OPENBRACKET = 17;
     public static final int CLOSEBRACKET = 18;
     public static final int EPSILON = -1;
+    public static final String TRADITIONAL = "Traditional";
 }
