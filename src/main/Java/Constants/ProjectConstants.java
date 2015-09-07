@@ -4,15 +4,6 @@ public class ProjectConstants {
 
 
     //Tokeniser Grammar
-
-
-    //Oracle Types
-    public static final String SINGLECANDIDATE = "Single Candidate";
-
-    //Randomiser Types
-    public static final String INTEGER = "Integer";
-
-
     public static final int VAR = 1;
     public static final int N = 2;
     public static final int CUTOFF = 3;
@@ -32,5 +23,13 @@ public class ProjectConstants {
     public static final int OPENBRACKET = 17;
     public static final int CLOSEBRACKET = 18;
     public static final int EPSILON = -1;
+
+    //Oracle Types
+    public static final String SINGLECANDIDATE = "Single Candidate";
+
+    //Randomiser Types
+    public static final String INTEGER = "Integer";
+
+    //Algorithm Types
     public static final String TRADITIONAL = "Traditional";
 }
