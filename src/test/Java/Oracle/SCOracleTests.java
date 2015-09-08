@@ -2,9 +2,12 @@ package Java.Oracle;
 
 import Java.Randomiser.ComparableObjectBuilder;
 import Java.Randomiser.NumComparableObject;
+import Java.Randomiser.VectorCandidate;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertFalse;
+import static junit.framework.Assert.assertTrue;
 
 public class SCOracleTests {
 
@@ -23,8 +26,19 @@ public class SCOracleTests {
         NumComparableObject y = ComparableObjectBuilder.createWith(9);
         Oracle oracle = SingleCandidateOracle.createSingleCandidateOracle();
 
+
         oracle.consider(y);
         assertEquals(false, oracle.consider(x));
+    }
+
+    @Test
+    public void shouldAnswerYesAndNoToVector() {
+        VectorCandidate i = new VectorCandidate(2, 90);
+        VectorCandidate j = new VectorCandidate(3, 90);
+        Oracle oracle = SingleCandidateOracle.createSingleCandidateOracle();
+        assertTrue(oracle.consider(i));
+        assertFalse(oracle.consider(j));
+
     }
 
 }

@@ -32,6 +32,7 @@ public class Mediator {
 
 
     public String run(String[] buildData, String algChoice, String matroidChoice, String oracleType) {
+
         running = true;
         constants = new ProjectConstants();
 
@@ -45,7 +46,6 @@ public class Mediator {
         if (!running) {
             return "";
         }
-
         for (int i = 0; i < randomSet.getSize(); i++) {
 
             if (!running) {
@@ -56,6 +56,7 @@ public class Mediator {
             }
             randomSet.alert();
         }
+
         return oracle.solution();
     }
 
@@ -73,6 +74,7 @@ public class Mediator {
         List<String> matroidChoices = new ArrayList<>();
 
         matroidChoices.add(ProjectConstants.INTEGER);
+        matroidChoices.add(ProjectConstants.VECTOR);
 
         return FXCollections.observableArrayList(matroidChoices);
     }
@@ -145,6 +147,10 @@ public class Mediator {
             return "";
         }
         return oracle.optimalSolution(randomSet.getMatroid());
+    }
+
+    public Randomiser getRandomiser() {
+        return randomSet;
     }
 }
 

@@ -18,7 +18,8 @@ public class RandomiserFactoryImpl implements RandomiserFactory {
         switch (randomiserType) {
             case ProjectConstants.INTEGER:
                 return new IntRandomiser(buildInfo[0], buildInfo[1], buildInfo[2], buildInfo[3], buildInfo[4], (int) buildInfo[5]);
-
+            case ProjectConstants.VECTOR:
+                return new VectorRandomiser(buildInfo[0], buildInfo[1], buildInfo[2], buildInfo[3], buildInfo[4], (int) buildInfo[5]);
             default:
                 return null;
         }

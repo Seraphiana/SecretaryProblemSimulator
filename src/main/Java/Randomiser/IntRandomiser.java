@@ -11,7 +11,7 @@ public class IntRandomiser implements Randomiser<NumComparableObject> {
     private final int size;
     private List<NumComparableObject> matroid;
     private int index;
-    private Set<NumComparableObject> solution;
+    private List<NumComparableObject> solution;
 
 
     public IntRandomiser(int max) {
@@ -55,7 +55,7 @@ public class IntRandomiser implements Randomiser<NumComparableObject> {
         for (SortingElement<Integer> aMat : mat) {
             matroid.add(ComparableObjectBuilder.createWith(aMat.getValue()));
         }
-        solution = new HashSet<>();
+        solution = new ArrayList<>();
     }
 
     @Override
@@ -77,7 +77,7 @@ public class IntRandomiser implements Randomiser<NumComparableObject> {
     }
 
     @Override
-    public Set<NumComparableObject> getSolution() {
+    public List<NumComparableObject> getSolution() {
         return solution;
     }
 

@@ -76,7 +76,7 @@ public class GUIController implements Initializable {
                     c.getCharacters().toString(), d.getCharacters().toString(), freq.getCharacters().toString()};
             String result = mediator.run(buildData, algorithmChoice.getCharacters().toString(), (String) matroidChoice.getValue(), (String) oracleChoice.getValue());
             solution.setText(result);
-            if (!result.contains("You must select " )) {
+            if (!solution.toString().contains("You must select " )) {
                 matroidContents.setText(mediator.getMatroid().toString());
                 optimalSolution.setText(mediator.getOptimalSet());
             }

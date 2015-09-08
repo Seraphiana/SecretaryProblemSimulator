@@ -29,6 +29,7 @@ public class ProjectConstants {
 
     //Randomiser Types
     public static final String INTEGER = "Scalar";
+    public static final String VECTOR = "Vector";
 
     //Algorithm Types
     public static final String TRADITIONAL = "Traditional";

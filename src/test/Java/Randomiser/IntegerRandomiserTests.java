@@ -56,7 +56,7 @@ public class IntegerRandomiserTests {
     public void shouldGiveASolutionSet() {
         Randomiser<NumComparableObject> randomiser = new IntRandomiser(3);
         randomiser.itemDecision(true);
-        assertNotSame(new HashSet<Integer>(), randomiser.getSolution());
+        assertNotSame(new ArrayList<NumComparableObject>(), randomiser.getSolution());
     }
 
     @Test

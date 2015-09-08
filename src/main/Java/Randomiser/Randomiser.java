@@ -11,7 +11,7 @@ public interface Randomiser<T extends ComparableObject> {
 
     void itemDecision(boolean answer);
 
-    Set<T> getSolution();
+    List<T> getSolution();
 
     void alert();
 
