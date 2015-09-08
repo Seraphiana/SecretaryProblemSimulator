@@ -35,7 +35,7 @@ public class MediatorTest {
         String matroidChoice = ProjectConstants.VECTOR;
         String oracleType = ProjectConstants.SINGLECANDIDATE;
         String result = mediator.run(buildData, algChoice, matroidChoice, oracleType);
-        String trimmedResult = result.substring(0, result.length()-2);
+        String trimmedResult = result.substring(0, result.length() - 2);
         assertTrue(VectorCandidate.createFromString(trimmedResult).magnitude() > 1);
     }
 
@@ -53,5 +53,15 @@ public class MediatorTest {
         String result = mediator.run(buildData, "", "", "");
         String expected = "You must select\r" + "an algorithm," + "\r" + "a matroid, " + "\r" + "an oracleType," + "\r" + "to run.";
         assertThat(result, is(expected));
+    }
+
+    @Test
+    public void shouldRunWithoutThrowingAnySortOfExceptionUsingLinearIndependenceOracle() throws Exception {
+        String algChoice = "test";
+        String matroidChoice = ProjectConstants.VECTOR;
+        String oracleType = ProjectConstants.LINEARINDEPENDENT;
+        String result = mediator.run(buildData, algChoice, matroidChoice, oracleType);
+        String trimmedResult = result.substring(0, result.length()-2);
+        assertTrue(VectorCandidate.createFromString(trimmedResult).magnitude() > 1);
     }
 }

@@ -10,7 +10,8 @@ public class OracleFactoryImpl {
         switch (oracleType) {
             case ProjectConstants.SINGLECANDIDATE:
                 return SingleCandidateOracle.createSingleCandidateOracle();
-
+            case ProjectConstants.LINEARINDEPENDENT:
+                return new LinearIndependenceOracle();
             default:
                 return null;
         }

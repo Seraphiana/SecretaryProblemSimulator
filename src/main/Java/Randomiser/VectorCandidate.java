@@ -17,6 +17,9 @@ public class VectorCandidate extends ComparableObject {
         candidate = candidate.substring(1, candidate.length() - 1);
         String[] data = candidate.split(",");
         double magnitude = Double.parseDouble(data[0]);
+        if (data[1].contains("'")) {
+            data[1] = data[1].substring(0, data[1].length()-2);
+        }
         int direction = Integer.parseInt(data[1]);
         return new VectorCandidate(magnitude, direction);
     }
@@ -107,5 +110,7 @@ public class VectorCandidate extends ComparableObject {
     public int magnitude() {
         return (int) magnitude;
     }
+
+    public double direction() {return (double) direction;}
 
 }

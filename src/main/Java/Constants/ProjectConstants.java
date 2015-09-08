@@ -26,11 +26,12 @@ public class ProjectConstants {
 
     //Oracle Types
     public static final String SINGLECANDIDATE = "Single Candidate";
+    public static final String LINEARINDEPENDENT = "Linear Independence";
 
     //Randomiser Types
     public static final String INTEGER = "Scalar";
-    public static final String VECTOR = "Vector";
 
+    public static final String VECTOR = "Vector";
     //Algorithm Types
     public static final String TRADITIONAL = "Traditional";
 }

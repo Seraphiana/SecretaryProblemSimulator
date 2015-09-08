@@ -88,7 +88,7 @@ public class VectorRandomiser implements Randomiser<VectorCandidate> {
         int num = 1;
         for (VectorCandidate element : matroid) {
             matroidContents += element.toString()+", ";
-            if (num==10) {
+            if (num==5) {
                 matroidContents += "\r";
                 num=0;
             }

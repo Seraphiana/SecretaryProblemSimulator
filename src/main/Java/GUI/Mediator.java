@@ -18,9 +18,8 @@ public class Mediator {
     private RandomiserFactory randomiserFactory;
     private OracleFactoryImpl oracleFactory;
     private AlgorithmBuilder algorithmBuilder;
-    private List errors;
-    private ProjectConstants constants;
     private boolean running;
+    private String[] error;
     private Randomiser randomSet;
     private Oracle oracle;
 
@@ -34,7 +33,6 @@ public class Mediator {
     public String run(String[] buildData, String algChoice, String matroidChoice, String oracleType) {
 
         running = true;
-        constants = new ProjectConstants();
 
         updateAll(buildData, algChoice, matroidChoice, oracleType);
         String errors = getErrors(algChoice, matroidChoice, oracleType);
@@ -67,6 +65,7 @@ public class Mediator {
     public ObservableList<String> getOracles() {
         List<String> oracles = new ArrayList<>();
         oracles.add(ProjectConstants.SINGLECANDIDATE);
+        oracles.add(ProjectConstants.LINEARINDEPENDENT);
         return FXCollections.observableArrayList(oracles);
     }
 
@@ -80,7 +79,7 @@ public class Mediator {
     }
 
     private String getErrors(String algChoice, String matroidChoice, String oracleType) {
-        String[] error = new String[] {"", "", ""};
+        error = new String[] {"", "", "", ""};
         boolean runFailed = false;
         if (algChoice.length()==0) {
             error[0] = "an algorithm,\r";
@@ -99,7 +98,7 @@ public class Mediator {
             runFailed = oracleIsRunFailed(error);
         }
         if (runFailed) {
-            return ("You must select\r" + error[0]  + error[1]  + error[2] +  "to run.");
+            return ("You must select\r" + error[0]  + error[1]  + error[2] + error[3] + "to run.");
         }
         return null;
     }
@@ -126,7 +125,7 @@ public class Mediator {
                 buildDataAsDoubles[index] = Double.parseDouble(buildData[i]);
                 index++;
             } catch (NumberFormatException e) {
-                errors.add("invalid input in field" + i);
+                error[3]="invalid input in field" + i + "\r";
             }
         }
         randomiserFactory.update(matroidChoice, buildDataAsDoubles);
