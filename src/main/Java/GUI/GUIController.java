@@ -81,10 +81,5 @@ public class GUIController implements Initializable {
                 optimalSolution.setText(mediator.getOptimalSet());
             }
         });
-
-
-
-
-
     }
 }
